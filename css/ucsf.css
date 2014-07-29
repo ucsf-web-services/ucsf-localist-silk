@@ -1,5 +1,6 @@
 ---
 ---
+/* UCSF banner navigation */
 .banner-nav {
     background: none repeat scroll 0 0 #000;
     color: #fff;
@@ -69,10 +70,16 @@
 }
 
 @media only screen and (max-width: 767px) {
+
     #banner-nav-mobile {
         display: block;
     }
     #banner-nav {
         display: none;
     }
+}
+
+/* hide localist footer */
+#lclst_footer {
+    display: none;
 }
