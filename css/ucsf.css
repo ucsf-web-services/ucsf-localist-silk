@@ -1,0 +1,55 @@
+#banner-nav {
+    background: none repeat scroll 0 0 #000;
+    color: #fff;
+    font-family: "Helvetica",sans-serif;
+    overflow: hidden;
+    width: 100%;
+}
+
+#banner-nav ul {
+    left: -10px;
+    margin: 0 auto;
+    max-width: 940px;
+    padding-left: 20px;
+    position: relative;
+}
+
+#banner-nav li {
+    line-height: 1em;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #fff;
+    display: inline;
+    font-size: 0.75em;
+}
+
+#banner-nav a {
+    color: #fff;
+    margin: 0 0.5em;
+    padding: 9px 0.5em 0 0;
+    white-space: nowrap;
+}
+#banner-nav a:link,
+#banner-nav a:visited,
+#banner-nav a:focus,
+#banner-nav a:active {
+    text-decoration: none;
+}
+
+#banner-nav a:hover {
+    text-decoration: underline;
+}
+
+
+#banner-nav li:before {
+    content: "";
+}
+
+#banner-nav li:first-child a {
+    background: url("../img/banner-nav-ucsf-logo.png") no-repeat scroll left 3px transparent;
+    display: inline-block;
+    margin-left: 0;
+    min-height: 20px;
+    padding-left: 5.5em;
+}
