@@ -68,7 +68,7 @@
     display: none;
 }
 
-@media screen and (max-width: 650px) {
+@media only screen and (max-width: 767px) {
     #banner-nav-mobile {
         display: block;
     }
