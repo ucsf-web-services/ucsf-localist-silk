@@ -5,7 +5,7 @@
 
 ## Local installation for development
 
-1. Install [Jekyll]()
+1. Install [Jekyll](http://jekyllrb.com/).
 2. From within your local repository root, run Jekyll.
 
     ```bash
