@@ -61,22 +61,8 @@
     border-right: 0;
 }
 
-#ucsf-banner-nav {
-    display: block;
-}
-
 #ucsf-banner-nav-mobile {
     display: none;
-}
-
-@media only screen and (max-width: 767px) {
-
-    #ucsf-banner-nav-mobile {
-        display: block;
-    }
-    #ucsf-banner-nav {
-        display: none;
-    }
 }
 
 /* UCSF footer */
@@ -96,8 +82,25 @@
     max-width: 940px;
 }
 
+#ucsf-footer-mobile {
+    display: none;
+}
+
 /* hide localist footer */
 #lclst_footer {
     display: none;
 }
 
+/* media queries */
+@media only screen and (max-width: 767px) {
+
+    #ucsf-banner-nav-mobile,
+    #ucsf-footer-mobile {
+        display: block;
+    }
+
+    #ucsf-banner-nav,
+    #ucsf-footer {
+        display: none;
+    }
+}
