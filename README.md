@@ -9,7 +9,7 @@
 2. From within your local repository root, run Jekyll.
 
     ```bash
-    jekyll serve --trace
+    jekyll serve --watch
     ```
 3. Visit `localhost:4000` in your browser.
 
