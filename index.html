@@ -6,8 +6,8 @@
 <!-- LOCALIST COMMENT - START head_tags -->
 <!-- LOCALIST COMMENT - PLACEHOLDER localist_styles -->
 <!-- LOCALIST COMMENT - PLACEHOLDER localist_js -->
-<link rel="stylesheet" media="all" href="{{site.github.url}}/css/ucsf.css">
-<link rel="stylesheet" media="print" href="{{site.github.url}}/css/ucsf-print.css">
+<link rel="stylesheet" media="all" href="{{ site.github.url }}/css/ucsf.css">
+<link rel="stylesheet" media="print" href="{{ site.github.url }}/css/ucsf-print.css">
 <!-- LOCALIST COMMENT - END head_tags -->
 </head>
 <body>
@@ -36,7 +36,7 @@
         <!-- LOCALIST COMMENT - PLACEHOLDER top_bar -->
         <!-- LOCALIST COMMENT - PLACEHOLDER content -->
         <div class="ucsf-footer">
-            &copy; {{'now'|date: "%Y"}} The Regents of the University of California. All rights reserved.
+            &copy; {{ site.time | date: "%Y" }} The Regents of the University of California. All rights reserved.
         </div>
     </div>
 <!-- LOCALIST COMMENT - END body -->
