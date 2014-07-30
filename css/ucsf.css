@@ -1,7 +1,7 @@
 ---
 ---
 /* UCSF banner navigation */
-.banner-nav {
+.ucsf-banner-nav {
     background: none repeat scroll 0 0 #000;
     color: #fff;
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
@@ -9,7 +9,7 @@
     width: 100%;
 }
 
-.banner-nav ul {
+.ucsf-banner-nav ul {
     left: -10px;
     margin: 0 auto;
     max-width: 940px;
@@ -17,7 +17,7 @@
     position: relative;
 }
 
-.banner-nav li {
+.ucsf-banner-nav li {
     line-height: 1em;
     list-style: none outside none;
     margin: 0;
@@ -27,29 +27,29 @@
     font-size: 0.75em;
 }
 
-.banner-nav a {
+.ucsf-banner-nav a {
     color: #fff;
     margin: 0 0.5em;
     padding: 9px 0.5em 0 0;
     white-space: nowrap;
 }
-.banner-nav a:link,
-.banner-nav a:visited,
-.banner-nav a:focus,
-.banner-nav a:active {
+.ucsf-banner-nav a:link,
+.ucsf-banner-nav a:visited,
+.ucsf-banner-nav a:focus,
+.ucsf-banner-nav a:active {
     text-decoration: none;
 }
 
-.banner-nav a:hover {
+.ucsf-banner-nav a:hover {
     text-decoration: underline;
 }
 
 
-.banner-nav li:before {
+.ucsf-banner-nav li:before {
     content: "";
 }
 
-.banner-nav li:first-child a {
+.ucsf-banner-nav li:first-child a {
     background: url("{{site.github.url}}/img/banner-nav-ucsf-logo.png") no-repeat scroll left 3px transparent;
     display: inline-block;
     margin-left: 0;
@@ -57,24 +57,24 @@
     padding-left: 5.5em;
 }
 
-.banner-nav li:last-child {
+.ucsf-banner-nav li:last-child {
     border-right: 0;
 }
 
-#banner-nav {
+#ucsf-banner-nav {
     display: block;
 }
 
-#banner-nav-mobile {
+#ucsf-banner-nav-mobile {
     display: none;
 }
 
 @media only screen and (max-width: 767px) {
 
-    #banner-nav-mobile {
+    #ucsf-banner-nav-mobile {
         display: block;
     }
-    #banner-nav {
+    #ucsf-banner-nav {
         display: none;
     }
 }
