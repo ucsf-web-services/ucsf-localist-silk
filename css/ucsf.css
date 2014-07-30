@@ -81,15 +81,9 @@
 
 /* UCSF footer */
 .ucsf-footer {
-    background: none repeat scroll 0 0 #000;
-    color: #fff;
-    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-    overflow: hidden;
-    width: 100%;
-    left: -10px;
-    margin: 0 auto;
-    padding: 20px 20px 30px 0;
-    position: relative;
+    /* todo */
+    display: none;
+
 }
 
 /* hide localist footer */
