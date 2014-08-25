@@ -50,7 +50,7 @@
 }
 
 .ucsf-banner-nav li:first-child a {
-    background: url("{{site.github.url}}/img/banner-nav-ucsf-logo.png") no-repeat scroll left 3px transparent;
+    background: url("//{{ site.github.owner_name }}.github.io/{{ site.github.repository_name }}/img/banner-nav-ucsf-logo.png") no-repeat scroll left 3px transparent;
     display: inline-block;
     margin-left: 0;
     min-height: 20px;
