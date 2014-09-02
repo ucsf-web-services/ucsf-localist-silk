@@ -78,6 +78,11 @@
     margin-top: 20px;
 }
 
+.ucsf-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .ucsf-footer div {
     margin:10px auto;
     text-align:left;
