@@ -5,7 +5,7 @@
 {% endif %}
 /* UCSF banner navigation */
 .ucsf-banner-nav {
-    background: none repeat scroll 0 0 #000;
+    background: none repeat scroll 0 0 #052049;
     color: #fff;
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
     overflow: hidden;
@@ -70,7 +70,7 @@
 
 /* UCSF footer */
 .ucsf-footer {
-    background-color:#000;
+    background-color:#052049;
     color: #fff;
     font-family: "Helvetica Neue", helvetica, arial, sans-serif;
     overflow: hidden;
