@@ -154,3 +154,29 @@
         display: none;
     }
 }
+
+#comments
+{ display: none; }
+
+div.nocontent
+{ display: none; }
+a.add_comment_button
+{ display: none; }
+a.add_review_button
+{ display: none; }
+a.add_photo_button
+{ display: none; }
+#menu ul
+{float: right; }
+#menu ul
+{padding: 39px; }
+#top div a
+{float: left; }
+#top div a
+{padding: 50px; }
+#x-section-tab-buttons
+{padding-top: 20px; }
+#wrapper div.grid_4.omega.sidebar
+{padding-top: 20px; }
+#ucsf-banner-nav
+{ position: absolute; top:0; width: 100%; }
