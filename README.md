@@ -16,5 +16,5 @@
 
 ## Deployment
 
-1. Merge you changes into the `gh-pages` branch, and they will be automatically deployed to [GitHub Pages](http://ucsf-drupal.github.io/ucsf-localist-silk/). This may take up to a few minutes.
+1. Merge you changes into the `gh-pages` branch, and they will be automatically deployed to [GitHub Pages](http://ucsf-web-services.github.io/ucsf-localist-silk/). This may take up to a few minutes.
 2. Once the changes have propagated to GH Pages, [update your SILK wrapper](http://support.localist.com/article/89-article) on Localist.
