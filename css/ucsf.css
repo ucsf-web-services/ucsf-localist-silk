@@ -6,7 +6,6 @@
 #top {
     background: #fff;
     border-bottom: 1px solid #e1eaf0;
-    height: 110px;
     position: relative;
 }
 #ucsf-banner-nav {
@@ -173,9 +172,6 @@ a.add_review_button
 a.add_photo_button
 { display: none; }
 #menu {
-  position: absolute;
-  top: 45px;
-  right: 0px;
 
 }
 #top .home_link {
@@ -187,10 +183,12 @@ a.add_photo_button
 #menu ul
 {
   padding: 5px;
+  float: left;
 }
 #top div a
 {
-
+  float: left;
+  padding: 50px;
 }
 #x-section-tab-buttons
 {padding-top: 20px; }
