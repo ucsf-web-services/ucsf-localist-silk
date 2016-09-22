@@ -243,6 +243,15 @@ a.add_photo_button
   #menu {
       float: none;
   }
+
+  #menu .nav-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      height: 64px;
+      padding: 50px 20px;
+  }
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .grid_container .grid_1, .grid_container .grid_2, .grid_container .grid_3, .grid_container .grid_4,
