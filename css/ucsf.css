@@ -3,6 +3,12 @@
 {% if site.github.repository_name %}
     {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
 {% endif %}
+#top {
+    background: #fff;
+    border-bottom: 1px solid #e1eaf0;
+    height: 110px;
+    position: relative;
+}
 #ucsf-banner-nav {
   height: 40px;
   overflow: hidden;
@@ -166,16 +172,24 @@ a.add_review_button
 { display: none; }
 a.add_photo_button
 { display: none; }
+#menu {
+  position: absolute;
+  top: 45px;
+  right: 0px;
+
+}
 #menu ul
-{float: right; }
+{
+
+}
 #menu ul
 {
   padding: 5px;
 }
 #top div a
-{float: left; }
-#top div a
-{padding: 50px; }
+{
+
+}
 #x-section-tab-buttons
 {padding-top: 20px; }
 #wrapper div.grid_4.omega.sidebar
@@ -187,8 +201,9 @@ a.add_photo_button
 #top .search_action {
     width: 33.33333%;
     padding: 0 15px;
-    float: right;
-    position: relative;
+    top: 10px;
+    right: 0px;
+    position: absolute;
     margin-top: 20px;
     height: 31px;
 
