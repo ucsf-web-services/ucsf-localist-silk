@@ -170,7 +170,7 @@ a.add_photo_button
 {float: right; }
 #menu ul
 {
-  padding: 5px; 
+  padding: 5px;
 }
 #top div a
 {float: left; }
@@ -190,6 +190,30 @@ a.add_photo_button
     float: right;
     position: relative;
     margin-top: 20px;
-    height: 20px;
-    border: 1px dashed #939393;
+    height: 31px;
+
+}
+#top .search_action input {
+    background: transparent;
+    color: rgba(84,110,122,0.5);
+    font-weight: 400;
+    border: 0;
+    border-bottom: 1px solid rgba(84,110,122,0.5);
+    padding: 5px 0px;
+    margin-bottom: 0;
+    width: 85%;
+    outline: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-radius: 0;
+}
+#top .search_action button {
+    background: none;
+    border: 0;
+    color: #546e7a;
+    position: relative;;
+    right: auto;
+    top: auto;
+    margin: 0;
 }
