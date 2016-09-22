@@ -178,7 +178,7 @@ a.add_photo_button
     font-family: "PT Sans",helvetica,arial,sans-serif;
     font-weight: 300;
     font-size: 20px;
-    padding-left: 15px;
+    padding: 40px 15px 40px 40px;
 }
 #menu ul
 {
@@ -188,7 +188,6 @@ a.add_photo_button
 #top div a
 {
   float: left;
-  padding: 50px;
 }
 #x-section-tab-buttons
 {padding-top: 20px; }
