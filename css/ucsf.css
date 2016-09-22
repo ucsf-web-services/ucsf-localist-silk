@@ -237,3 +237,12 @@ a.add_photo_button
       float: none;
   }
 }
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  .grid_container .grid_1, .grid_container .grid_2, .grid_container .grid_3, .grid_container .grid_4,
+  .grid_container .grid_5, .grid_container .grid_6, .grid_container .grid_7, .grid_container .grid_8,
+  .grid_container .grid_9, .grid_container .grid_10, .grid_container .grid_11, .grid_container .grid_12,
+  .grid_container .grid_13, .grid_container .grid_14, .grid_container .grid_15, .grid_container .grid_16 {
+      margin: 0;
+      width: 100%;
+  }
+}
