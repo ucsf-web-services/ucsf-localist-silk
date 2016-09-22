@@ -3,6 +3,9 @@
 {% if site.github.repository_name %}
     {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
 {% endif %}
+body>.grid_container {
+  margin-top: 0;
+}
 #top {
     background: #fff;
     border-bottom: 1px solid #e1eaf0;
@@ -12,7 +15,10 @@
   height: 40px;
   overflow: hidden;
   font-family: "Helvetica Neue", "arial", sans-serif;
-  background: #052049;}
+  background: #052049;
+  width: 100%;
+}
+
   #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
     background: none;
     text-indent: 0%;
@@ -21,9 +27,10 @@
   #ucsf-banner-nav .top-header-container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 1230px; }
+    padding-left: 30px;
+    padding-right: 30px;
+
+  }
     #ucsf-banner-nav .top-header-container ul.menu {
       padding: 0;
       margin: 0; }
@@ -173,6 +180,7 @@ a.add_photo_button
 { display: none; }
 #menu {
   float: right;
+  margin: 30px 0 0 0;
 }
 #top .home_link {
     font-family: "PT Sans",helvetica,arial,sans-serif;
@@ -193,8 +201,7 @@ a.add_photo_button
 {padding-top: 20px; }
 #wrapper div.grid_4.omega.sidebar
 {padding-top: 20px; }
-#ucsf-banner-nav
-{ position: absolute; top:0; width: 100%; }
+
 
 
 #top .search_action {
@@ -202,7 +209,7 @@ a.add_photo_button
     padding: 0 15px;
     height: 31px;
     float: right;
-    margin: 10px 0 0 0;
+    margin: 40px 0 0 0;
 }
 #top .search_action input {
     background: transparent;
