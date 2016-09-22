@@ -201,9 +201,9 @@ a.add_photo_button
 #top .search_action {
     width: 33.33333%;
     padding: 0 15px;
-    margin-top: 0px;
     height: 31px;
     float: right;
+    margin: 10px 0 0 0;
 }
 #top .search_action input {
     background: transparent;
@@ -228,4 +228,9 @@ a.add_photo_button
     right: auto;
     top: auto;
     margin: 0;
+}
+@media only screen and (max-width: 959px) {
+  #top .search_action {
+      display: block;
+  }
 }
