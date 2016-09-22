@@ -4,7 +4,7 @@
     {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
 {% endif %}
 body>.grid_container {
-  margin-top: 0;
+
 }
 #top {
     background: #fff;
