@@ -172,7 +172,7 @@ a.add_review_button
 a.add_photo_button
 { display: none; }
 #menu {
-
+  float: right;
 }
 #top .home_link {
     font-family: "PT Sans",helvetica,arial,sans-serif;
@@ -231,5 +231,9 @@ a.add_photo_button
 @media only screen and (max-width: 959px) {
   #top .search_action {
       display: block;
+  }
+
+  #menu {
+      float: none;
   }
 }
