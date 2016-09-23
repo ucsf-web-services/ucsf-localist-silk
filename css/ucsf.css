@@ -4,7 +4,7 @@
     {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
 {% endif %}
 body>.grid_container {
-
+  margin-top: 0;
 }
 #top {
     background: #fff;
@@ -13,10 +13,12 @@ body>.grid_container {
 }
 #ucsf-banner-nav {
   height: 40px;
-  overflow: hidden;
+  overflow: visible;
   font-family: "Helvetica Neue", "arial", sans-serif;
   background: #052049;
   width: 100%;
+  position: relative;
+  top: auto;
 }
 
   #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
