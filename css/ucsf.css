@@ -3,6 +3,9 @@
 {% if site.github.repository_name %}
     {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
 {% endif %}
+body {
+  font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
+}
 body>.grid_container {
   margin-top: 0;
 }
@@ -14,7 +17,7 @@ body>.grid_container {
 #ucsf-banner-nav {
   height: 40px;
   overflow: visible;
-  font-family: "Helvetica Neue", "arial", sans-serif;
+  font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
   background: #052049;
   width: 100%;
   position: relative;
@@ -185,7 +188,7 @@ a.add_photo_button
   margin: 30px 0 0 0;
 }
 #top .home_link {
-    font-family: "PT Sans",helvetica,arial,sans-serif;
+    font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
     font-weight: 300;
     font-size: 20px;
     padding: 40px 15px 40px 40px;
