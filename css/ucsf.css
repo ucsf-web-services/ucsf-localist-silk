@@ -1,8 +1,8 @@
----
----
+
 {% if site.github.repository_name %}
     {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
 {% endif %}
+
 body {
   font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
 }
@@ -266,4 +266,10 @@ a.add_photo_button
       margin: 0;
       width: 100%;
   }
+}
+.wrapper {
+  width: 100% !important;
+}
+.content-top .box_image img  {
+  max-width: 200px;
 }
