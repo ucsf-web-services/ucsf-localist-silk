@@ -270,6 +270,10 @@ a.add_photo_button
 .wrapper {
   width: 100% !important;
 }
+.content-top .box_image {
+  text-align: center;
+}
 .content-top .box_image img  {
   max-width: 200px;
+  margin: 0 auto;
 }
