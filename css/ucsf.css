@@ -1,7 +1,7 @@
-
+/*
 {% if site.github.repository_name %}
     {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
-{% endif %}
+{% endif %} */
 
 body {
   font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
@@ -30,15 +30,16 @@ body>.grid_container {
     padding-left: 0;
   }
   #ucsf-banner-nav .top-header-container {
+    max-width: 1320px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 30px;
-    padding-right: 30px;
-
+    padding-left: 20px;
+    padding-right: 20px;
   }
     #ucsf-banner-nav .top-header-container ul.menu {
       padding: 0;
-      margin: 0; }
+      margin: 0;
+    }
       #ucsf-banner-nav .top-header-container ul.menu li.first {
         display: inline-block;
         float: left;
@@ -276,4 +277,14 @@ a.add_photo_button
 .content-top .box_image img  {
   max-width: 200px;
   margin: 0 auto;
+}
+
+/* Utility classes */
+.u-visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
 }
