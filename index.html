@@ -17,12 +17,14 @@
   <!-- LOCALIST COMMENT - START body -->
   <div id="wrapper">
     <header>
+      <section class="universal-header">
+        <p id='site-name' class="first universal-header__title"><a href="http://www.ucsf.edu">University of California San Francisco</a></p>
+        <a href="https://giving.ucsf.edu" class="universal-header__give">Give to UCSF</a>
+      </section>
       <div id="ucsf-banner-nav">
         <div class="top-header-container row">
           <ul class="menu">
-            <li class="first"><a href="http://www.ucsf.edu">University of California San
-                Francisco</a>
-            </li>
+
             <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
             <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
             <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
@@ -32,11 +34,72 @@
 
       <div id="top">
         <div class="grid_12 alpha">
-          <!-- LOCALIST COMMENT - PLACEHOLDER search_bar -->
-          <!-- LOCALIST COMMENT - PLACEHOLDER user_menu -->
+          <div class="search_action">
+            <form method="get" id="topsearch" action="/search">
+              <label for="top-search" class="sr-only">Search</label>
+              <input id="top-search" type="text" name="search" value=""
+                placeholder="Search places, events, departments/groups">
+              <button id="top-submit" type="submit"><i class="localist-icon-search-small"><span
+                    class="sr-only">Search</span></i></button>
+            </form>
+          </div>
+
+          <div id="menu">
+            <ul class="action_menu">
+              <!-- new items counter. don't show if none -->
+
+              <li class="profile_icon"><a href="#" data-dropdown="me" aria-haspopup="true"
+                  aria-expanded="false" id="x-me-menu"><img alt="sasha.miller" class=""
+                    src="http://ucsf.staging.localist.com/assets/main/person_small-6731f23d81c809688d955de51ff6349b.png"
+                    width="50" height="50">&nbsp;<i class="fa fa-chevron-down"></i></a></li>
+              <li>
+              </li>
+            </ul>
+
+            <!-- me menu -->
+            <ul class="action_menu_items" data-menu-reparent="false" data-dropdown-menu="me"
+              data-menu-alignment="center"
+              style="display: none; width: 134px; position: absolute; top: 62660px; left: 176765px;"
+              id="x-me-menu-list">
+              <!-- new items counter. don't show if none -->
+
+
+              <li class="menu_header">Administration</li>
+              <li><a href="/admin" class="admin_link">Calendar Admin</a></li>
+
+
+
+              <li class="menu_header">Me</li>
+              <li><a href="/sashazm85_777/home">Dashboard</a></li>
+              <li><a href="http://ucsf.staging.localist.com/sashazm85_777">Public Profile</a></li>
+              <li><a href="/sashazm85_777/calendar">My Calendar</a></li>
+              <li><a href="/sashazm85_777/messages">Messages</a></li>
+              <li><a
+                  href="http://ucsf.staging.localist.com/sashazm85_777/reviews/manage">Reviews</a>
+              </li>
+              <li><a href="/sashazm85_777/friends/manage">Following</a></li>
+              <li><a href="/sashazm85_777/photos/manage">Photos</a></li>
+              <li><a href="/settings">Settings</a></li>
+
+
+              <li class="last_menu_item"><a href="http://ucsf.staging.localist.com/auth/logout">Log
+                  Out</a></li>
+
+            </ul>
+
+          </div>
+
+
           <a class="home_link" href="/">UCSF Events Calendar</a>
         </div>
       </div>
+      <!-- <div id="top"> -->
+      <!-- <div class="grid_12 alpha"> -->
+      <!-- LOCALIST COMMENT - PLACEHOLDER search_bar -->
+      <!-- LOCALIST COMMENT - PLACEHOLDER user_menu
+      <a class="home_link" href="/">UCSF Events Calendar</a>
+      </div>
+      </div> -->
     </header>
 
 
