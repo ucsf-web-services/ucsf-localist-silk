@@ -1,0 +1,292 @@
+/*
+{% if site.github.repository_name %}
+    {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
+{% endif %} */
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "variables";
+
+body {
+  font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
+}
+body>.grid_container {
+  margin-top: 0;
+}
+#top {
+    background: #fff;
+    border-bottom: 1px solid #e1eaf0;
+    position: relative;
+}
+#ucsf-banner-nav {
+  height: 40px;
+  overflow: visible;
+  font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
+  background: #052049;
+  width: 100%;
+  position: relative;
+  top: auto;
+}
+
+  #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
+    background: none;
+    text-indent: 0%;
+    padding-left: 0;
+  }
+  #ucsf-banner-nav .top-header-container {
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+    #ucsf-banner-nav .top-header-container ul.menu {
+      padding: 0;
+      margin: 0;
+    }
+      #ucsf-banner-nav .top-header-container ul.menu li.first {
+        display: inline-block;
+        float: left;
+        padding: 12px 0px 12px 58px;
+        background: url("{{ base_url }}/ucsf-logo-banner.png") no-repeat;
+        background-position: 0 35%;
+        background-position-x: 0;
+        background-position-y: 35%; }
+        @media (max-width: 600px) {
+          #ucsf-banner-nav .top-header-container ul.menu li.first {
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden; } }
+      #ucsf-banner-nav .top-header-container ul.menu li {
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        padding: 12px 10px 12px; }
+        @media (max-width: 830px) {
+          #ucsf-banner-nav .top-header-container ul.menu li {
+            display: none; } }
+        @media (max-width: 600px) {
+          #ucsf-banner-nav .top-header-container ul.menu li {
+            display: none; } }
+        #ucsf-banner-nav .top-header-container ul.menu li a {
+          text-decoration: none;
+          color: #fff; }
+        #ucsf-banner-nav .top-header-container ul.menu li a:hover {
+          text-decoration: underline;}
+
+/* Colors */
+
+#ucsf-banner-nav.arial {
+    font-family: arial,sans-serif;
+}
+
+#ucsf-banner-nav.teal {
+    background: #18a3ac;
+}
+
+#ucsf-banner-nav.green {
+    background: #90bd31;
+}
+
+#ucsf-banner-nav.light-blue {
+    background: #178ccb;
+}
+
+#ucsf-banner-nav.orange {
+    background: #f48024;
+}
+
+#ucsf-banner-nav.grey {
+    background: #b4b9bf;
+}
+
+#ucsf-banner-nav.purple {
+    background: #716fb2;
+}
+
+#ucsf-banner-nav.red {
+    background: #ec1848;
+}
+
+#ucsf-banner-nav.yellow {
+    background: #ffdd00;
+}
+
+#ucsf-banner-nav.white {
+    background: #ffffff;
+}
+
+#ucsf-banner-nav.yellow a,#ucsf-banner-nav.white a {
+    color: #000000;
+}
+
+:root #ucsf-banner-nav .top-header-container ul.menu li.first {
+    background: url("{{ base_url }}/ucsf-logo-banner.svg") no-repeat;
+    background-size: 45px 22px;
+    background-position-x: 0;
+    background-position-y: 35%;
+    background-position: 0 35%;
+}
+
+
+:root #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
+    background: none;
+}
+
+/* UCSF footer */
+.ucsf-footer {
+    background-color:#052049;
+    color: #fff;
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    float: left;
+}
+
+.ucsf-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.ucsf-footer div {
+    margin:10px auto;
+    text-align:left;
+    padding-left: 20px;
+    left: -10px;
+    max-width: 940px;
+}
+
+#ucsf-footer-mobile {
+    display: none;
+}
+
+/* hide localist footer */
+#lclst_footer {
+    display: none;
+}
+
+/* media queries */
+@media only screen and (max-width: 767px) {
+    #ucsf-footer-mobile {
+        display: block;
+    }
+
+    #ucsf-footer {
+        display: none;
+    }
+}
+
+#comments
+{ display: none; }
+
+div.nocontent
+{ display: none; }
+a.add_comment_button
+{ display: none; }
+a.add_review_button
+{ display: none; }
+a.add_photo_button
+{ display: none; }
+#menu {
+  float: right;
+  margin: 30px 0 0 0;
+}
+#top .home_link {
+    font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 40px 15px 40px 40px;
+}
+#menu ul
+{
+  padding: 5px;
+  float: left;
+}
+#top div a
+{
+  float: left;
+}
+#x-section-tab-buttons
+{padding-top: 20px; }
+#wrapper div.grid_4.omega.sidebar
+{padding-top: 20px; }
+
+
+
+#top .search_action {
+    width: 33.33333%;
+    padding: 0 15px;
+    height: 31px;
+    float: right;
+    margin: 40px 0 0 0;
+}
+#top .search_action input {
+    background: transparent;
+    color: rgba(84,110,122,0.5);
+    font-weight: 400;
+    border: 0;
+    border-bottom: 1px solid rgba(84,110,122,0.5);
+    padding: 5px 0px;
+    margin-bottom: 0;
+    width: 85%;
+    outline: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    border-radius: 0;
+}
+#top .search_action button {
+    background: none;
+    border: 0;
+    color: #546e7a;
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 0;
+}
+@media only screen and (max-width: 959px) {
+  #top .search_action {
+      display: block;
+  }
+
+  #menu {
+      float: none;
+  }
+
+  #menu .nav-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      height: 64px;
+      padding: 50px 20px;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+  .grid_container .grid_1, .grid_container .grid_2, .grid_container .grid_3, .grid_container .grid_4,
+  .grid_container .grid_5, .grid_container .grid_6, .grid_container .grid_7, .grid_container .grid_8,
+  .grid_container .grid_9, .grid_container .grid_10, .grid_container .grid_11, .grid_container .grid_12,
+  .grid_container .grid_13, .grid_container .grid_14, .grid_container .grid_15, .grid_container .grid_16 {
+      margin: 0;
+      width: 100%;
+  }
+}
+.wrapper {
+  width: 100% !important;
+}
+.content-top .box_image {
+  text-align: center;
+}
+.content-top .box_image img  {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Utility classes */
+.u-visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
