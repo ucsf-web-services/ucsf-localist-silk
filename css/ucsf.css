@@ -1,31 +1,46 @@
-/* {% if site.github.repository_name %} {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %} {% endif %} */
-body { font-family: "Helvetica Neue", helvetica, "arial", sans-serif; }
+{% if site.github.repository_name %} {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %} {% endif %}
+/* breakpoints */
+body { font-family: "Helvetica Neue", helvetica, "arial", sans-serif; margin: 0; }
 
 body > .grid_container { margin-top: 0; }
 
 #top { background: #fff; border-bottom: 1px solid #e1eaf0; position: relative; }
 
-#ucsf-banner-nav { height: 40px; overflow: visible; font-family: "Helvetica Neue", helvetica, "arial", sans-serif; background: #052049; width: 100%; position: relative; top: auto; }
+.universal-header { box-sizing: border-box; display: flex; align-items: center; height: 40px; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; width: 100%; position: relative; }
 
-#ucsf-banner-nav.no-logo .top-header-container ul.menu li.first { background: none; text-indent: 0%; padding-left: 0; }
+@media (min-width: 960px) { .universal-header { justify-content: space-between; } }
 
-#ucsf-banner-nav .top-header-container { max-width: 1320px; margin-right: auto; margin-left: auto; padding-left: 20px; padding-right: 20px; }
+.universal-header * { box-sizing: border-box; }
 
-#ucsf-banner-nav .top-header-container ul.menu { padding: 0; margin: 0; }
+.universal-header__title { display: block; text-decoration: none; color: #fff; font-size: 0.9em; }
 
-#ucsf-banner-nav .top-header-container ul.menu li.first { display: inline-block; float: left; padding: 12px 0px 12px 58px; background: url("{{ base_url }}/ucsf-logo-banner.png") no-repeat; background-position: 0 35%; background-position-x: 0; background-position-y: 35%; }
+.universal-header__give { display: block; color: #fff; text-decoration: none; font-size: 0.9em; line-height: 40px; background-color: #007cbe; padding: 0px 15px; }
 
-@media (max-width: 600px) { #ucsf-banner-nav .top-header-container ul.menu li.first { text-indent: 100%; white-space: nowrap; overflow: hidden; } }
+@media (min-width: 960px) { .universal-header__give { display: none; } }
 
-#ucsf-banner-nav .top-header-container ul.menu li { display: inline-block; float: right; font-size: 14px; padding: 12px 10px 12px; }
+.universal-header__give--desktop { display: none; }
 
-@media (max-width: 830px) { #ucsf-banner-nav .top-header-container ul.menu li { display: none; } }
+@media (min-width: 960px) { .universal-header__give--desktop { display: flex; } }
 
-@media (max-width: 600px) { #ucsf-banner-nav .top-header-container ul.menu li { display: none; } }
+.universal-header__give--mobile { display: flex; }
 
-#ucsf-banner-nav .top-header-container ul.menu li a { text-decoration: none; color: #fff; }
+.universal-header__give--mobile .icon-heart { background-position: center; width: 2rem; height: 40px; margin-left: auto; }
 
-#ucsf-banner-nav .top-header-container ul.menu li a:hover { text-decoration: underline; }
+@media (min-width: 960px) { .universal-header__give--mobile { display: none; } }
+
+@media (min-width: 960px) { .universal-header__menu-container { margin-left: auto; } }
+
+.universal-header-bg { background-color: #052049; }
+
+.universal-header__menu { list-style: none; display: flex; flex-direction: column; position: absolute; left: 0; top: 40px; width: 100%; height: auto; margin: 0; padding: 0; z-index: 10; background-color: #f2f4f6; box-shadow: 2px 2px 2px #CCC; display: none; }
+
+@media (min-width: 960px) { .universal-header__menu { display: flex; flex-direction: row; position: static; width: auto; background-color: transparent; margin: 0; padding: 0; z-index: 1; box-shadow: none; } }
+
+.universal-header__menu-link { display: block; text-decoration: none; color: #052049; overflow: hidden; white-space: nowrap; line-height: 40px; border-bottom: 1px solid #d5d9de; padding-left: 15px; font-size: 16px; }
+
+@media (min-width: 960px) { .universal-header__menu-link { color: #fff; margin-right: 1em; border-bottom: none; padding-left: none; font-size: 0.9em; } }
+
+.universal-header__menu-link:hover { text-decoration: underline; }
 
 /* Colors */
 #ucsf-banner-nav.arial { font-family: arial,sans-serif; }
@@ -110,7 +125,36 @@ a.add_photo_button { display: none; }
 
 .content-top .box_image img { max-width: 200px; margin: 0 auto; }
 
+.menu-toggle { display: grid; grid-template-rows: repeat(3, auto); align-content: center; align-items: start; width: 14px; background-color: transparent; outline: none; box-shadow: none; outline-style: none; border: none; cursor: pointer; box-sizing: content-box; }
+
+.menu-toggle .line { background-color: #fff; height: 1px; width: 14px; }
+
+.menu-toggle .line:nth-child(1) { grid-row: 1; margin-bottom: 3px; }
+
+.menu-toggle .line:nth-child(2) { grid-row: 2; margin-bottom: 3px; }
+
+.menu-toggle--close { display: block; }
+
+.menu-toggle--close .line { position: absolute; height: 2px; right: 0; }
+
+.menu-toggle--close .line:nth-child(1) { transform: rotate(-45deg); }
+
+.menu-toggle--close .line:nth-child(2) { display: none; }
+
+.menu-toggle--close .line:nth-child(3) { transform: rotate(45deg); }
+
+.universal-header__menu-toggle { position: relative; right: 0; top: 1px; padding-left: 1rem; padding-right: 0; height: 40px; margin-left: auto; }
+
+@media (min-width: 960px) { .universal-header__menu-toggle { display: none; } }
+
+.icon-heart { display: block; background-image: url(https://www.ucsf.edu/themes/custom/ucsf/assets/images/card/heart-reverse.svg); background-repeat: no-repeat; }
+
 /* Utility classes */
 .u-visually-hidden { position: absolute !important; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; height: 1px; width: 1px; word-wrap: normal; }
+
+/* Layout classes */
+.l-container { max-width: 1320px; margin: 0 auto; padding: 0 15px; }
+
+@media (min-width: 960px) { .l-container { padding: 0 50px; } }
 
 /*# sourceMappingURL=ucsf.css.map */

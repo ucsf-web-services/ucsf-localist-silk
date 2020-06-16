@@ -1,12 +1,23 @@
-/*
+
 {% if site.github.repository_name %}
-    {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
-{% endif %} */
+{% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
+{% endif %}
+
 @import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "variables";
 
+// Variables for components
+// Arbitrary numbers used throughout the file;
+$container-max-width: 1320px;
+$container-gutter: 15px;
+$container-gutter-big: 50px;
+
+$universal-nav-height: 40px;
+$nav-toggle-size: 14px;
+
 body {
   font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
+  margin: 0;
 }
 body>.grid_container {
   margin-top: 0;
@@ -16,61 +27,132 @@ body>.grid_container {
     border-bottom: 1px solid #e1eaf0;
     position: relative;
 }
-#ucsf-banner-nav {
-  height: 40px;
-  overflow: visible;
-  font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
-  background: #052049;
+
+.universal-header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: $universal-nav-height;
+  font-family: map-get($universal-nav, "font");
   width: 100%;
   position: relative;
-  top: auto;
+
+  @include breakpoint($bp--960-up) {
+    justify-content: space-between;
+  }
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  &__title {
+    display: block;
+    text-decoration: none;
+    color: map-get($universal-nav, "font-color");
+    font-size: $font-size-small;
+  }
+
+  &__give {
+    display: block;
+    color: map-get($btn-give, "font-color");
+    text-decoration: none;
+    font-size: $font-size-small;
+    line-height: $universal-nav-height;
+    background-color: map-get($btn-give, "background");
+    padding: 0px $container-gutter;
+
+    @include breakpoint($bp--960-up) {
+      display: none;
+    }
+
+    &--desktop {
+      display:none;
+
+      @include breakpoint($bp--960-up) {
+        display: flex;
+      }
+    }
+
+    &--mobile {
+      display:flex;
+
+      .icon-heart {
+        background-position: center;
+        width: 2rem;
+        height: $universal-nav-height;
+        margin-left: auto;
+      }
+
+      @include breakpoint($bp--960-up) {
+        display: none;
+      }
+    }
+  }
+
+  &__menu-container {
+    @include breakpoint($bp--960-up) {
+      margin-left: auto;
+    }
+  }
+
+  &-bg {
+    background-color: map-get($universal-nav, "background");
+  }
 }
 
-  #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
-    background: none;
-    text-indent: 0%;
-    padding-left: 0;
+// Main menu starts here
+.universal-header__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: $universal-nav-height;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: $highest;
+  background-color: map-get($main-menu-mobile, "background");
+  box-shadow: 2px 2px 2px #CCC;
+  display: none;
+
+  @include breakpoint($bp--960-up) {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    box-shadow: none;
   }
-  #ucsf-banner-nav .top-header-container {
-    max-width: 1320px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-    #ucsf-banner-nav .top-header-container ul.menu {
-      padding: 0;
-      margin: 0;
+
+  &-link {
+    display: block;
+    text-decoration: none;
+    color: map-get($main-menu-mobile, "font-color");
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: $universal-nav-height;
+    border-bottom: 1px solid $c-grey2;
+    padding-left: $container-gutter;
+    font-size: $default--font-size;
+
+    @include breakpoint($bp--960-up) {
+      color: map-get($universal-nav, "font-color");
+      margin-right: 1em;
+      border-bottom: none;
+      padding-left: none;
+      font-size: $font-size-small;
     }
-      #ucsf-banner-nav .top-header-container ul.menu li.first {
-        display: inline-block;
-        float: left;
-        padding: 12px 0px 12px 58px;
-        background: url("{{ base_url }}/ucsf-logo-banner.png") no-repeat;
-        background-position: 0 35%;
-        background-position-x: 0;
-        background-position-y: 35%; }
-        @media (max-width: 600px) {
-          #ucsf-banner-nav .top-header-container ul.menu li.first {
-            text-indent: 100%;
-            white-space: nowrap;
-            overflow: hidden; } }
-      #ucsf-banner-nav .top-header-container ul.menu li {
-        display: inline-block;
-        float: right;
-        font-size: 14px;
-        padding: 12px 10px 12px; }
-        @media (max-width: 830px) {
-          #ucsf-banner-nav .top-header-container ul.menu li {
-            display: none; } }
-        @media (max-width: 600px) {
-          #ucsf-banner-nav .top-header-container ul.menu li {
-            display: none; } }
-        #ucsf-banner-nav .top-header-container ul.menu li a {
-          text-decoration: none;
-          color: #fff; }
-        #ucsf-banner-nav .top-header-container ul.menu li a:hover {
-          text-decoration: underline;}
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 /* Colors */
 
@@ -281,6 +363,78 @@ a.add_photo_button
   margin: 0 auto;
 }
 
+// Building out reusable toggle component.
+// apply positioning within .universal-header__menu-toggle
+.menu-toggle {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-content: center;
+  align-items: start;
+  width: $nav-toggle-size;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  outline-style: none;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+
+  .line {
+    background-color: $white;
+    height: 1px;
+    width: $nav-toggle-size;
+
+    @for $i from 1 through 2 {
+      &:nth-child(#{$i}) {
+        grid-row: $i;
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  &--close {
+    display: block;
+    .line {
+      position: absolute;
+      height: 2px;
+      right: 0;
+
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+// Positioning within header menu
+.universal-header__menu-toggle {
+  position: relative;
+  right: 0;
+  top: 1px;
+  padding-left: 1rem;
+  padding-right: 0;
+  height: $universal-nav-height;
+  margin-left: auto;
+
+  @include breakpoint($bp--960-up) {
+    display: none;
+  }
+}
+
+.icon-heart {
+  display: block;
+  background-image: url(https://www.ucsf.edu/themes/custom/ucsf/assets/images/card/heart-reverse.svg);
+  background-repeat: no-repeat;
+}
+
 /* Utility classes */
 .u-visually-hidden {
   position: absolute !important;
@@ -289,4 +443,15 @@ a.add_photo_button
   height: 1px;
   width: 1px;
   word-wrap: normal;
+}
+
+/* Layout classes */
+.l-container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $container-gutter;
+
+  @include breakpoint($bp--960-up) {
+    padding: 0 $container-gutter-big;
+  }
 }

@@ -1,0 +1,28 @@
+// Colors
+$white: #fff;
+$c-navy: #052049;
+$c-blue: #007cbe;
+$c-grey1: #f2f4f6;
+$c-grey2: #d5d9de;
+// Fonts
+$main-font: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$default--font-size: 16px;
+$font-size-small: .9em;
+$default--line-height: 1.4;
+
+
+/* breakpoints */
+$width--medium  : 769px;
+$width--960  	: 960px;
+
+$bp--medium-up  : $width--medium;
+$bp--960-up  	: $width--960;
+
+// z-index
+$highest: 10;
+
+// Sass maps
+$btn-give: ("background":$c-blue, "font-color":$white, "font": $main-font);
+$universal-nav: ("background":$c-navy, "font-color":$white, "font": $main-font);
+$main-menu-mobile: ("background":$c-grey1, "font-color":$c-navy, "font": $main-font);
