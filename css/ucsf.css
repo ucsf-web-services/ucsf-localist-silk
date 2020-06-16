@@ -1,4 +1,3 @@
-{% if site.github.repository_name %} {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %} {% endif %}
 /* breakpoints */
 body { font-family: "Helvetica Neue", helvetica, "arial", sans-serif; margin: 0; }
 
@@ -6,15 +5,15 @@ body > .grid_container { margin-top: 0; }
 
 #top { background: #fff; border-bottom: 1px solid #e1eaf0; position: relative; }
 
-.universal-header { box-sizing: border-box; display: flex; align-items: center; height: 40px; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; width: 100%; position: relative; }
+.universal-header { box-sizing: border-box; display: flex; align-items: center; height: 40px; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; padding: 0 3%; }
 
-@media (min-width: 960px) { .universal-header { justify-content: space-between; } }
+@media (min-width: 960px) { .universal-header { justify-content: flex-end; } }
 
 .universal-header * { box-sizing: border-box; }
 
-.universal-header__title { display: block; text-decoration: none; color: #fff; font-size: 0.9em; }
+.universal-header__title { display: block; text-decoration: none; color: #fff; font-size: 0.9em; margin-right: auto; }
 
-.universal-header__give { display: block; color: #fff; text-decoration: none; font-size: 0.9em; line-height: 40px; background-color: #007cbe; padding: 0px 15px; }
+.universal-header__give { display: block; color: #fff; text-decoration: none; font-size: 0.9em; line-height: 40px; background-color: #007cbe; padding: 0 3%; }
 
 @media (min-width: 960px) { .universal-header__give { display: none; } }
 
@@ -28,17 +27,15 @@ body > .grid_container { margin-top: 0; }
 
 @media (min-width: 960px) { .universal-header__give--mobile { display: none; } }
 
-@media (min-width: 960px) { .universal-header__menu-container { margin-left: auto; } }
-
 .universal-header-bg { background-color: #052049; }
 
-.universal-header__menu { list-style: none; display: flex; flex-direction: column; position: absolute; left: 0; top: 40px; width: 100%; height: auto; margin: 0; padding: 0; z-index: 10; background-color: #f2f4f6; box-shadow: 2px 2px 2px #CCC; display: none; }
+.universal-header__menu { list-style: none; display: flex; flex-direction: column; position: absolute; left: 0; top: 40px; width: 100%; height: auto; margin: 0; padding: 0; z-index: 10; background-color: #f2f4f6; box-shadow: 2px 2px 2px #CCC; }
 
 @media (min-width: 960px) { .universal-header__menu { display: flex; flex-direction: row; position: static; width: auto; background-color: transparent; margin: 0; padding: 0; z-index: 1; box-shadow: none; } }
 
-.universal-header__menu-link { display: block; text-decoration: none; color: #052049; overflow: hidden; white-space: nowrap; line-height: 40px; border-bottom: 1px solid #d5d9de; padding-left: 15px; font-size: 16px; }
+.universal-header__menu-link { display: block; text-decoration: none; color: #052049; overflow: hidden; white-space: nowrap; line-height: 40px; border-bottom: 1px solid #d5d9de; padding-left: 3%; font-size: 16px; }
 
-@media (min-width: 960px) { .universal-header__menu-link { color: #fff; margin-right: 1em; border-bottom: none; padding-left: none; font-size: 0.9em; } }
+@media (min-width: 960px) { .universal-header__menu-link { color: #fff; margin-right: 1em; border-bottom: none; padding-left: 0; font-size: 0.9em; } }
 
 .universal-header__menu-link:hover { text-decoration: underline; }
 
@@ -64,10 +61,6 @@ body > .grid_container { margin-top: 0; }
 #ucsf-banner-nav.white { background: #ffffff; }
 
 #ucsf-banner-nav.yellow a, #ucsf-banner-nav.white a { color: #000000; }
-
-:root #ucsf-banner-nav .top-header-container ul.menu li.first { background: url("{{ base_url }}/ucsf-logo-banner.svg") no-repeat; background-size: 45px 22px; background-position-x: 0; background-position-y: 35%; background-position: 0 35%; }
-
-:root #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first { background: none; }
 
 /* UCSF footer */
 .ucsf-footer { background-color: #052049; color: #fff; font-family: "Helvetica Neue", helvetica, arial, sans-serif; overflow: hidden; width: 100%; margin-top: 20px; float: left; }
@@ -153,8 +146,5 @@ a.add_photo_button { display: none; }
 .u-visually-hidden { position: absolute !important; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; height: 1px; width: 1px; word-wrap: normal; }
 
 /* Layout classes */
-.l-container { max-width: 1320px; margin: 0 auto; padding: 0 15px; }
-
-@media (min-width: 960px) { .l-container { padding: 0 50px; } }
 
 /*# sourceMappingURL=ucsf.css.map */

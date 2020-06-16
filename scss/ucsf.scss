@@ -1,16 +1,16 @@
 
-{% if site.github.repository_name %}
-{% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
-{% endif %}
+// {% if site.github.repository_name %}
+// {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
+// {% endif %}
 
 @import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "variables";
 
 // Variables for components
 // Arbitrary numbers used throughout the file;
-$container-max-width: 1320px;
-$container-gutter: 15px;
-$container-gutter-big: 50px;
+$container-max-width: 94%;
+$container-max-width-desktop: 90%;
+$container-gutter: 3%;
 
 $universal-nav-height: 40px;
 $nav-toggle-size: 14px;
@@ -34,11 +34,11 @@ body>.grid_container {
   align-items: center;
   height: $universal-nav-height;
   font-family: map-get($universal-nav, "font");
-  width: 100%;
   position: relative;
+  padding: 0 3%;
 
   @include breakpoint($bp--960-up) {
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   & * {
@@ -50,6 +50,7 @@ body>.grid_container {
     text-decoration: none;
     color: map-get($universal-nav, "font-color");
     font-size: $font-size-small;
+    margin-right: auto;
   }
 
   &__give {
@@ -59,7 +60,7 @@ body>.grid_container {
     font-size: $font-size-small;
     line-height: $universal-nav-height;
     background-color: map-get($btn-give, "background");
-    padding: 0px $container-gutter;
+    padding: 0 $container-gutter;
 
     @include breakpoint($bp--960-up) {
       display: none;
@@ -74,7 +75,7 @@ body>.grid_container {
     }
 
     &--mobile {
-      display:flex;
+      display: flex;
 
       .icon-heart {
         background-position: center;
@@ -89,11 +90,11 @@ body>.grid_container {
     }
   }
 
-  &__menu-container {
-    @include breakpoint($bp--960-up) {
-      margin-left: auto;
-    }
-  }
+  // &__menu-container {
+  //   @include breakpoint($bp--960-up) {
+  //     margin-left: auto;
+  //   }
+  // }
 
   &-bg {
     background-color: map-get($universal-nav, "background");
@@ -115,7 +116,7 @@ body>.grid_container {
   z-index: $highest;
   background-color: map-get($main-menu-mobile, "background");
   box-shadow: 2px 2px 2px #CCC;
-  display: none;
+  // display: none;
 
   @include breakpoint($bp--960-up) {
     display: flex;
@@ -144,7 +145,7 @@ body>.grid_container {
       color: map-get($universal-nav, "font-color");
       margin-right: 1em;
       border-bottom: none;
-      padding-left: none;
+      padding-left: 0;
       font-size: $font-size-small;
     }
 
@@ -198,19 +199,6 @@ body>.grid_container {
 
 #ucsf-banner-nav.yellow a,#ucsf-banner-nav.white a {
     color: #000000;
-}
-
-:root #ucsf-banner-nav .top-header-container ul.menu li.first {
-    background: url("{{ base_url }}/ucsf-logo-banner.svg") no-repeat;
-    background-size: 45px 22px;
-    background-position-x: 0;
-    background-position-y: 35%;
-    background-position: 0 35%;
-}
-
-
-:root #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
-    background: none;
 }
 
 /* UCSF footer */
@@ -446,12 +434,3 @@ a.add_photo_button
 }
 
 /* Layout classes */
-.l-container {
-  max-width: $container-max-width;
-  margin: 0 auto;
-  padding: 0 $container-gutter;
-
-  @include breakpoint($bp--960-up) {
-    padding: 0 $container-gutter-big;
-  }
-}
