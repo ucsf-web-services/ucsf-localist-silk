@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-{% include base_url_assignment.html %}
+<!-- {% include base_url_assignment.html %} -->
 <!-- LOCALIST COMMENT - START head_tags -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- LOCALIST COMMENT - PLACEHOLDER localist_styles -->
@@ -17,13 +17,19 @@
 <!-- LOCALIST COMMENT - START body -->
   <div id="wrapper">
     <header>
-      <section class="universal-header-bg">
+      <section class="background--dark">
         <div id="ucsf-header-nav" class="universal-header">
           <a id='site-name' class="first universal-header__title" href="https://www.ucsf.edu">University of California San Francisco</a>
+           <!-- Mobile nav toggle -->
+           <button data-js="nav-toggle" class="universal-header__menu-toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
           <!-- Navigation  -->
           <nav id="ucsf-banner-nav">
             <h2 class="u-visually-hidden" id="universal-header-main-menu">Main Menu</h2>
-            <ul class="menu universal-header__menu">
+            <ul id="collapsible-menu" class="menu universal-header__menu">
               <li>
                 <a href="https://www.ucsfhealth.org/" class="universal-header__menu-link">UCSF Medical Center</a>
               </li>
@@ -34,17 +40,11 @@
                 <a href="https://www.ucsf.edu/about" class="universal-header__menu-link">About UCSF</a>
               </li>
               <!-- Give btn - mobile -->
-              <a href="https://giving.ucsf.edu" class="universal-header__give universal-header__give--mobile">Give to UCSF<span class="icon-heart"></span></a>
+              <a href="https://giving.ucsf.edu" class="universal-header__give universal-header__give--mobile">Give to UCSF<span class="icon-give"></span></a>
             </ul>
           </nav>
           <!-- Give btn - desktop -->
           <a href="https://giving.ucsf.edu" class="universal-header__give universal-header__give--desktop">Give to UCSF</a>
-          <!-- Mobile nav toggle -->
-          <button class="universal-header__menu-toggle menu-toggle">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </button>
         </div>
       </section>
 
@@ -79,9 +79,50 @@
       </div>
     </div>
   </div>
-  <script>
-    console.log('testing');
 
+  <script>
+    var body = document.querySelector('body');
+    var $menuToggle = document.querySelector('[data-js="nav-toggle"]');
+
+    // Add / remove CSS class responsible for revealing mobile nav.
+    // toggle aria attributes for accessibility.
+    function toggleMenu() {
+      document.body.classList.toggle('show-nav');
+
+      if ($menuToggle.getAttribute('aria-expanded') === 'false') {
+        $menuToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        $menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    };
+
+    // Only execute navigation extend / collapse code in mobile
+    var mobileDetect = function(event) {
+      // Mobile
+      if (event.matches) {
+        // set area controls
+        $menuToggle.setAttribute('aria-expanded', 'false');
+        $menuToggle.setAttribute('aria-controls', 'collapsible-menu');
+
+        // toggle mobile menu open and closed
+        $menuToggle.addEventListener('click', toggleMenu);
+
+      // Desktop
+      } else {
+        body.classList.remove('show-nav');
+        $menuToggle.removeEventListener('click', toggleMenu);
+        // Remove unnecessary Aria controls from desktop nav
+        $menuToggle.removeAttribute('aria-expanded');
+        $menuToggle.removeAttribute('aria-controls');
+      }
+    }
+
+    // Use MatchMedia to ensure that nav expand/collapse is only happening in mobile
+    var mql = matchMedia('(max-width: 960px)');
+    // Detect mobile on page load.
+    mobileDetect(mql);
+    // Watch to see if the page size changes.
+    mql.addListener(mobileDetect);
   </script>
   <!-- LOCALIST COMMENT - END body -->
 </body>

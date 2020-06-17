@@ -1,0 +1,207 @@
+// Variables for components
+// Arbitrary numbers used throughout the file;
+
+$universal-nav-height: 40px;
+$link-height-mobile: 48px;
+$nav-toggle-size: 14px;
+
+$btn-give-height-mobile: 58px;
+
+.universal-header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: $universal-nav-height;
+  font-family: map-get($ucsf-branding-dark, "font");
+  position: relative;
+  padding: 0 $container-gutter;
+
+  @include breakpoint($bp--960-up) {
+    justify-content: flex-end;
+  }
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  &__title {
+    display: block;
+    text-decoration: none;
+    color: map-get($ucsf-branding-dark, "font-color");
+    font-size: $font-size-small;
+    margin-right: auto;
+  }
+
+  // Give Button
+  &__give {
+    color: map-get($btn-give, "font-color");
+    text-decoration: none;
+    font-size: $font-size-small;
+    line-height: $btn-give-height-mobile;
+    background-color: map-get($btn-give, "background");
+    min-width: 152px;
+
+    &:hover {
+      background-color: darken(map-get($btn-give, "background"), 2%);
+    }
+
+    &--mobile {
+      display: flex;
+      padding: 0 $container-gutter;
+
+      @include breakpoint($bp--960-up) {
+        display: none;
+      }
+
+      .icon-give {
+        background-image: map-get($btn-give, "icon");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+        width: 2rem;
+        margin-left: auto;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include breakpoint($bp--960-up) {
+        display: flex;
+        justify-content: center;
+        line-height: $universal-nav-height;
+      }
+    }
+  }
+
+}
+
+// Main menu starts here
+.universal-header__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: $universal-nav-height;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  z-index: $z-highest;
+  max-height: 0;
+  overflow: hidden;
+  background-color: map-get($main-menu-mobile, "background");
+
+  @include breakpoint($bp--960-up) {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    height: $universal-nav-height;
+    max-height: $universal-nav-height;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    transition: none;
+  }
+
+  .show-nav & {
+    max-height: 400px;
+    transition: max-height .3s ease-out;
+  }
+
+  &-link {
+    display: block;
+    text-decoration: none;
+    color: map-get($main-menu-mobile, "font-color");
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid $c-grey2;
+    padding-left: $container-gutter;
+    font-size: $default--font-size;
+    line-height: $link-height-mobile;
+    box-sizing: border-box;
+
+    @include breakpoint($bp--960-up) {
+      line-height: $universal-nav-height;
+      color: map-get($ucsf-branding-dark, "font-color");
+      margin-right: 1em;
+      border-bottom: none;
+      padding-left: 0;
+      font-size: $font-size-small;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Mobile menu toggle
+.universal-header__menu-toggle {
+  // Creating a button
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  align-content: center;
+  align-items: start;
+  width: $nav-toggle-size;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  outline-style: none;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+  // Positioning within the header
+  position: relative;
+  right: 0;
+  top: 1px;
+  padding-left: 1rem;
+  padding-right: 0;
+  height: $universal-nav-height;
+
+  &:focus {
+    border: 1px dotted $white;
+  }
+
+  @include breakpoint($bp--960-up) {
+    display: none;
+  }
+
+  .line {
+    background-color: $white;
+    height: 1px;
+    width: $nav-toggle-size;
+
+    @for $i from 1 through 2 {
+      &:nth-child(#{$i}) {
+        grid-row: $i;
+        margin-bottom: 3px;
+      }
+    }
+  }
+
+  .show-nav & {
+    display: block;
+
+    .line {
+      position: absolute;
+      height: 2px;
+      right: 0;
+
+      &:nth-child(1) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

@@ -20,9 +20,17 @@ $bp--medium-up  : $width--medium;
 $bp--960-up  	: $width--960;
 
 // z-index
-$highest: 10;
+$z-highest: 10;
+
+// Icon urls, must be absolute for localist to use
+$icon-give: url(https://www.ucsf.edu/themes/custom/ucsf/assets/images/card/heart-reverse.svg);
+
+// container and gutters
+$container-max-width: 94%;
+$container-max-width-desktop: 90%;
+$container-gutter: 3%;
 
 // Sass maps
-$btn-give: ("background":$c-blue, "font-color":$white, "font": $main-font);
-$universal-nav: ("background":$c-navy, "font-color":$white, "font": $main-font);
+$btn-give: ("background":$c-blue, "font-color":$white, "font": $main-font, "icon": $icon-give);
+$ucsf-branding-dark: ("background":$c-navy, "font-color":$white, "font": $main-font);
 $main-menu-mobile: ("background":$c-grey1, "font-color":$c-navy, "font": $main-font);

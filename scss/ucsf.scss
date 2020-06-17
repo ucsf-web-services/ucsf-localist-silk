@@ -5,15 +5,7 @@
 
 @import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "variables";
-
-// Variables for components
-// Arbitrary numbers used throughout the file;
-$container-max-width: 94%;
-$container-max-width-desktop: 90%;
-$container-gutter: 3%;
-
-$universal-nav-height: 40px;
-$nav-toggle-size: 14px;
+@import "ucsf-navigation";
 
 body {
   font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
@@ -26,133 +18,6 @@ body>.grid_container {
     background: #fff;
     border-bottom: 1px solid #e1eaf0;
     position: relative;
-}
-
-.universal-header {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  height: $universal-nav-height;
-  font-family: map-get($universal-nav, "font");
-  position: relative;
-  padding: 0 3%;
-
-  @include breakpoint($bp--960-up) {
-    justify-content: flex-end;
-  }
-
-  & * {
-    box-sizing: border-box;
-  }
-
-  &__title {
-    display: block;
-    text-decoration: none;
-    color: map-get($universal-nav, "font-color");
-    font-size: $font-size-small;
-    margin-right: auto;
-  }
-
-  &__give {
-    display: block;
-    color: map-get($btn-give, "font-color");
-    text-decoration: none;
-    font-size: $font-size-small;
-    line-height: $universal-nav-height;
-    background-color: map-get($btn-give, "background");
-    padding: 0 $container-gutter;
-
-    @include breakpoint($bp--960-up) {
-      display: none;
-    }
-
-    &--desktop {
-      display:none;
-
-      @include breakpoint($bp--960-up) {
-        display: flex;
-      }
-    }
-
-    &--mobile {
-      display: flex;
-
-      .icon-heart {
-        background-position: center;
-        width: 2rem;
-        height: $universal-nav-height;
-        margin-left: auto;
-      }
-
-      @include breakpoint($bp--960-up) {
-        display: none;
-      }
-    }
-  }
-
-  // &__menu-container {
-  //   @include breakpoint($bp--960-up) {
-  //     margin-left: auto;
-  //   }
-  // }
-
-  &-bg {
-    background-color: map-get($universal-nav, "background");
-  }
-}
-
-// Main menu starts here
-.universal-header__menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  top: $universal-nav-height;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  z-index: $highest;
-  background-color: map-get($main-menu-mobile, "background");
-  box-shadow: 2px 2px 2px #CCC;
-  // display: none;
-
-  @include breakpoint($bp--960-up) {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
-    box-shadow: none;
-  }
-
-  &-link {
-    display: block;
-    text-decoration: none;
-    color: map-get($main-menu-mobile, "font-color");
-    overflow: hidden;
-    white-space: nowrap;
-    line-height: $universal-nav-height;
-    border-bottom: 1px solid $c-grey2;
-    padding-left: $container-gutter;
-    font-size: $default--font-size;
-
-    @include breakpoint($bp--960-up) {
-      color: map-get($universal-nav, "font-color");
-      margin-right: 1em;
-      border-bottom: none;
-      padding-left: 0;
-      font-size: $font-size-small;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 /* Colors */
@@ -195,6 +60,10 @@ body>.grid_container {
 
 #ucsf-banner-nav.white {
     background: #ffffff;
+}
+
+.background--dark {
+  background-color: map-get($ucsf-branding-dark, "background");
 }
 
 #ucsf-banner-nav.yellow a,#ucsf-banner-nav.white a {
@@ -351,77 +220,6 @@ a.add_photo_button
   margin: 0 auto;
 }
 
-// Building out reusable toggle component.
-// apply positioning within .universal-header__menu-toggle
-.menu-toggle {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
-  align-content: center;
-  align-items: start;
-  width: $nav-toggle-size;
-  background-color: transparent;
-  outline: none;
-  box-shadow: none;
-  outline-style: none;
-  border: none;
-  cursor: pointer;
-  box-sizing: content-box;
-
-  .line {
-    background-color: $white;
-    height: 1px;
-    width: $nav-toggle-size;
-
-    @for $i from 1 through 2 {
-      &:nth-child(#{$i}) {
-        grid-row: $i;
-        margin-bottom: 3px;
-      }
-    }
-  }
-
-  &--close {
-    display: block;
-    .line {
-      position: absolute;
-      height: 2px;
-      right: 0;
-
-      &:nth-child(1) {
-        transform: rotate(-45deg);
-      }
-
-      &:nth-child(2) {
-        display: none;
-      }
-
-      &:nth-child(3) {
-        transform: rotate(45deg);
-      }
-    }
-  }
-}
-
-// Positioning within header menu
-.universal-header__menu-toggle {
-  position: relative;
-  right: 0;
-  top: 1px;
-  padding-left: 1rem;
-  padding-right: 0;
-  height: $universal-nav-height;
-  margin-left: auto;
-
-  @include breakpoint($bp--960-up) {
-    display: none;
-  }
-}
-
-.icon-heart {
-  display: block;
-  background-image: url(https://www.ucsf.edu/themes/custom/ucsf/assets/images/card/heart-reverse.svg);
-  background-repeat: no-repeat;
-}
 
 /* Utility classes */
 .u-visually-hidden {
@@ -432,5 +230,3 @@ a.add_photo_button
   width: 1px;
   word-wrap: normal;
 }
-
-/* Layout classes */
