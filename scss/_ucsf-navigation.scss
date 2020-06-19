@@ -42,6 +42,7 @@ $btn-give-height-mobile: 58px;
 
     &:hover {
       background-color: darken(map-get($btn-give, "background"), 2%);
+      color: map-get($btn-give, "font-color");
     }
 
     &--mobile {
@@ -133,6 +134,7 @@ $btn-give-height-mobile: 58px;
     }
 
     &:hover {
+      color: map-get($ucsf-branding-dark, "font-color");
       text-decoration: underline;
     }
   }
@@ -160,6 +162,10 @@ $btn-give-height-mobile: 58px;
   padding-left: 1rem;
   padding-right: 0;
   height: $universal-nav-height;
+
+  &:hover {
+    background-color: transparent;
+  }
 
   &:focus {
     border: 1px dotted $white;

@@ -32,5 +32,9 @@
   &__link {
     color: map-get($ucsf-branding-dark, "font-color");
     text-decoration: underline;
+
+    &:hover {
+      color: map-get($ucsf-branding-dark, "font-color");
+    }
   }
 }
