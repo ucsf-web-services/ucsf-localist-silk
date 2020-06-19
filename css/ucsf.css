@@ -138,7 +138,7 @@ a.add_photo_button { display: none; }
 
 .action-menu .search_action { padding-top: 40px; position: relative; grid-column: 1 / 2; grid-row: 1; width: 100%; }
 
-@media (min-width: 960px) { .action-menu .search_action { grid-column: 2 / 3; grid-row: 1; } }
+@media (min-width: 960px) { .action-menu .search_action { grid-column: 3 / 3; grid-row: 1; } }
 
 .action-menu .search_action input { background: transparent; color: #506380; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 400; border: 0; border-bottom: 1px solid #506380; margin-bottom: 0; width: 95%; outline: 0; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; border-radius: 0; line-height: 15px; }
 
