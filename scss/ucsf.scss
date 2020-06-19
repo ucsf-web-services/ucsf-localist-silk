@@ -105,7 +105,7 @@ a.add_photo_button { display: none; }
 #top .action-menu {
   display: grid;
   grid-template-columns: 38% 30% 32%;
-  grid-template-rows: 40px 1fr;
+  grid-template-rows: auto auto;
 
   @include breakpoint($bp--960-up) {
     grid-template-rows: 1fr;

@@ -132,7 +132,7 @@ a.add_photo_button { display: none; }
 
 #wrapper div.grid_4.omega.sidebar { padding-top: 20px; }
 
-#top .action-menu { display: grid; grid-template-columns: 38% 30% 32%; grid-template-rows: 40px 1fr; }
+#top .action-menu { display: grid; grid-template-columns: 38% 30% 32%; grid-template-rows: auto auto; }
 
 @media (min-width: 960px) { #top .action-menu { grid-template-rows: 1fr; } }
 
