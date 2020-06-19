@@ -144,6 +144,7 @@ a.add_photo_button { display: none; }
 
       &::after {
         content: "";
+        display: block;
         border-bottom: 1px solid map-get($action-search, "font-color");
         height: 1px;
       }
