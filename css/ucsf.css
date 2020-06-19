@@ -124,7 +124,7 @@ a.add_photo_button { display: none; }
 
 #menu { float: right; margin: 30px 0 0 0; }
 
-#top .home_link { font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #052049; font-weight: 300; font-size: 20px; padding: 3% 15px 40px 40px; text-decoration: none; }
+#top .home_link { font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #052049; font-weight: 300; font-size: 20px; padding: 0 15px 40px 0; text-decoration: none; }
 
 #menu ul { padding: 5px; float: left; }
 
