@@ -104,11 +104,10 @@ a.add_photo_button { display: none; }
 
 .action-menu {
   display: grid;
-  grid-template-columns: 70% auto;
+  grid-template-columns: 38% 30% 32%;
   grid-template-rows: 40px 1fr;
 
   @include breakpoint($bp--960-up) {
-    grid-template-columns: 38% 30% 32%;
     grid-template-rows: 1fr;
   }
 
@@ -116,7 +115,7 @@ a.add_photo_button { display: none; }
   .search_action {
     padding-top: $action-menu-padding-top;
     position: relative;
-    grid-column: 1 / -1;
+    grid-column: 1 / 2;
     grid-row: 1;
     width: 100%;
 
@@ -175,13 +174,9 @@ a.add_photo_button { display: none; }
 
   #menu {
     float: none;
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 2;
 
-    @include breakpoint($bp--960-up) {
-      grid-row: 1;
-      grid-column: 2;
-    }
      .nav-button {
       position: absolute;
       top: 0;
