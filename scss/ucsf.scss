@@ -131,7 +131,7 @@ a.add_photo_button { display: none; }
       display: block;
       border-bottom: 1px solid map-get($action-search, "font-color");
       height: 1px;
-      margin: 1.5rem 1rem 0 0;
+      margin: 1.2rem 1rem 0 0;
     }
 
     input {
@@ -172,14 +172,17 @@ a.add_photo_button { display: none; }
     color: map-get($ucsf-branding, "font-color");
     font-size: 18px;
     font-weight: 300;
-    padding: $action-menu-padding-top 15px 40px 0;
+    padding: 0 15px 40px 0;
     text-decoration: none;
     margin-right: auto;
+    line-height: 40px;
 
     @include breakpoint($bp--960-up) {
       grid-row: 1;
       grid-column: 1;
       font-size: 20px;
+      padding: $action-menu-padding-top 15px 40px 0;
+      line-height: 80px;
     }
   }
 
