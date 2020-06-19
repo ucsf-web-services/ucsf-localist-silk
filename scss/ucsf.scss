@@ -118,11 +118,12 @@ a.add_photo_button { display: none; }
     grid-column: 1 / -1;
     grid-row: 1;
     width: 100%;
+    padding: $action-menu-padding-top 0 0 0;
+
 
     @include breakpoint($bp--960-up) {
       grid-column: 3 / 3;
       grid-row: 1;
-      padding: $action-menu-padding-top 0 0 0;
     }
 
     // hack to put border bottom under input.
@@ -132,8 +133,8 @@ a.add_photo_button { display: none; }
       display: block;
       border-bottom: 1px solid map-get($action-search, "font-color");
       height: 1px;
-      margin-right: 1rem;
-       margin-bottom: .8rem;
+      margin-right: 1.6rem;
+      margin-bottom: .8rem;
     }
 
     input {
@@ -148,10 +149,9 @@ a.add_photo_button { display: none; }
       transition: all .2s ease-in-out;
       border-radius: 0;
       line-height: 15px;
-      padding: 0 0 15px 0;
+      padding: 0 15px 15px 0;
 
       @include breakpoint($bp--960-up) {
-        padding: 0 15px 15px 0;
       }
     }
 
