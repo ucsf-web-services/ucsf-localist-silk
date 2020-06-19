@@ -29,6 +29,10 @@ $btn-give-height-mobile: 58px;
     color: map-get($ucsf-branding-dark, "font-color");
     font-size: $font-size-small;
     margin-right: auto;
+
+    &:hover {
+      color: map-get($ucsf-branding-dark, "font-color");
+    }
   }
 
   // Give Button
@@ -134,8 +138,12 @@ $btn-give-height-mobile: 58px;
     }
 
     &:hover {
-      color: map-get($ucsf-branding-dark, "font-color");
+      color: map-get($main-menu-mobile, "font-color");
       text-decoration: underline;
+
+      @include breakpoint($bp--960-up) {
+        color: map-get($ucsf-branding-dark, "font-color");
+      }
     }
   }
 }
