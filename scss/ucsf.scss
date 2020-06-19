@@ -183,7 +183,8 @@ a.add_photo_button
 
 // Width that matches UCSF universal header and footer
 .wrapper {
-  width: calc(100% - #{$container-gutter-combined} + #{$localist-grid-gutter-combined}) !important;
+  // width: calc(100% - #{$container-gutter-combined} + #{$localist-grid-gutter-combined}) !important;
+  width: calc(100% - 6% + 35px) !important;
 }
 .content-top .box_image {
   text-align: center;
