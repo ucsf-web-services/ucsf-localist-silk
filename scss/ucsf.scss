@@ -15,9 +15,13 @@ body>.grid_container {
   margin-top: 0;
 }
 #top {
-    background: #fff;
-    border-bottom: 1px solid #e1eaf0;
-    position: relative;
+  background: #fff;
+  border-bottom: 1px solid #e1eaf0;
+  position: relative;
+
+  &::after {
+
+  }
 }
 
 /* Colors */
@@ -118,10 +122,11 @@ a.add_photo_button
 
 #top .search_action {
     width: 33.33333%;
-    padding: 0 15px;
+    padding: 0;
     height: 31px;
     float: right;
     margin: 40px 0 0 0;
+    position: relative;
 }
 #top .search_action input {
     background: transparent;
@@ -142,10 +147,11 @@ a.add_photo_button
     background: none;
     border: 0;
     color: #546e7a;
-    position: relative;
-    right: auto;
+    position: absolute;
+    right: 0;
     top: auto;
     margin: 0;
+    padding-right: 0;
 }
 @media only screen and (max-width: 959px) {
   #top .search_action {
@@ -174,8 +180,10 @@ a.add_photo_button
       width: 100%;
   }
 }
+
+// Width that matches UCSF universal header and footer
 .wrapper {
-  width: 100% !important;
+  width: calc(100% - #{$container-gutter-combined} + #{$localist-grid-gutter-combined}) !important;
 }
 .content-top .box_image {
   text-align: center;
@@ -183,17 +191,6 @@ a.add_photo_button
 .content-top .box_image img  {
   max-width: 200px;
   margin: 0 auto;
-}
-
-
-/* Utility classes */
-.u-visually-hidden {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-  overflow: hidden;
-  height: 1px;
-  width: 1px;
-  word-wrap: normal;
 }
 
 .l-container {
