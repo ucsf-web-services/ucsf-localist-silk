@@ -29,6 +29,10 @@ $icon-give: url(https://www.ucsf.edu/themes/custom/ucsf/assets/images/card/heart
 $container-max-width: 94%;
 $container-max-width-desktop: 90%;
 $container-gutter: 3%;
+$localist-grid-gutter: 15px;
+
+$container-gutter-combined: calc($container-gutter * 2);
+$localist-grid-gutter-combined: calc($localist-grid-gutter * 2);
 
 // Sass maps
 $btn-give: ("background":$c-blue, "font-color":$white, "font": $main-font, "icon": $icon-give);
