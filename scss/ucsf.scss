@@ -124,6 +124,15 @@ a.add_photo_button { display: none; }
       grid-row: 1;
     }
 
+    // hack to put border bottom under input.
+    // due to not having control over HTML of the form.
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid map-get($action-search, "font-color");
+      height: 1px;
+    }
+
     input {
       background: transparent;
       color: map-get($action-search, "font-color");
@@ -140,13 +149,6 @@ a.add_photo_button { display: none; }
 
       @include breakpoint($bp--960-up) {
         padding-right: 15px;
-      }
-
-      &::after {
-        content: "";
-        display: block;
-        border-bottom: 1px solid map-get($action-search, "font-color");
-        height: 1px;
       }
     }
 
