@@ -7,6 +7,8 @@
 // {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
 // {% endif %}
 
+$action-menu-padding-top:40px;
+
 body {
   font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
   margin: 0;
@@ -18,10 +20,6 @@ body>.grid_container {
   background: #fff;
   border-bottom: 1px solid #e1eaf0;
   position: relative;
-
-  &::after {
-
-  }
 }
 
 /* Colors */
@@ -77,33 +75,18 @@ body>.grid_container {
 
 
 /* hide localist footer */
-#lclst_footer {
-    display: none;
-}
+#lclst_footer { display: none; }
+#comments { display: none; }
+div.nocontent { display: none; }
+a.add_comment_button { display: none; }
+a.add_review_button { display: none; }
+a.add_photo_button { display: none; }
 
-#comments
-{ display: none; }
-
-div.nocontent
-{ display: none; }
-a.add_comment_button
-{ display: none; }
-a.add_review_button
-{ display: none; }
-a.add_photo_button
-{ display: none; }
 #menu {
   float: right;
   margin: 30px 0 0 0;
 }
-#top .home_link {
-  font-family: map-get($ucsf-branding, "font");
-  color: map-get($ucsf-branding, "font-color");;
-  font-weight: 300;
-  font-size: 20px;
-  padding: 40px 15px 40px 0;
-  text-decoration: none;
-}
+
 #menu ul
 {
   padding: 5px;
@@ -119,58 +102,92 @@ a.add_photo_button
 {padding-top: 20px; }
 
 
+.action-menu {
+  display: grid;
+  grid-template-columns: 38% 30% 32%;
+  grid-template-rows: 40px 1fr;
 
-#top .search_action {
-    width: 33.33333%;
-    padding: 0;
-    height: 31px;
-    float: right;
-    margin: 40px 0 0 0;
+  @include breakpoint($bp--960-up) {
+    grid-template-rows: 1fr;
+  }
+
+  // Search form
+  .search_action {
+    padding-top: $action-menu-padding-top;
     position: relative;
-}
-#top .search_action input {
-    background: transparent;
-    color: rgba(84,110,122,0.5);
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid rgba(84,110,122,0.5);
-    padding: 5px 0px;
-    margin-bottom: 0;
-    width: 85%;
-    outline: 0;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    border-radius: 0;
-}
-#top .search_action button {
-    background: none;
-    border: 0;
-    color: #546e7a;
-    position: absolute;
-    right: 0;
-    top: auto;
-    margin: 0;
-    padding-right: 0;
-}
-@media only screen and (max-width: 959px) {
-  #top .search_action {
-      display: block;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    width: 100%;
+
+    @include breakpoint($bp--960-up) {
+      grid-column: 2 / 3;
+      grid-row: 1;
+    }
+
+    input {
+      background: transparent;
+      color: map-get($action-search, "font-color");
+      font-family: map-get($action-search, "font");
+      font-weight: 400;
+      border: 0;
+      border-bottom: 1px solid map-get($action-search, "font-color");
+      margin-bottom: 0;
+      width: 95%;
+      outline: 0;
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      border-radius: 0;
+      line-height: 15px;
+
+    }
+
+    button {
+      background: none;
+      border: 0;
+      color: #546e7a;
+      position: absolute;
+      right: 0;
+      top: auto;
+      margin: 0;
+      padding-right: 0;
+    }
+  }
+
+  .home_link {
+    grid-row: 2;
+    grid-column: 1;
+    font-family: map-get($ucsf-branding, "font");
+    color: map-get($ucsf-branding, "font-color");
+    font-size: 18px;
+    font-weight: 300;
+    padding: $action-menu-padding-top 15px 40px 0;
+    text-decoration: none;
+    margin-right: auto;
+
+    @include breakpoint($bp--960-up) {
+      grid-row: 1;
+      grid-column: 1;
+      font-size: 20px;
+    }
   }
 
   #menu {
-      float: none;
-  }
+    float: none;
+    grid-row: 1;
+    grid-column: 2;
 
-  #menu .nav-button {
+     .nav-button {
       position: absolute;
       top: 0;
       right: 0;
       display: block;
       height: 64px;
       padding: 50px 20px;
+    }
   }
 }
+
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .grid_container .grid_1, .grid_container .grid_2, .grid_container .grid_3, .grid_container .grid_4,
   .grid_container .grid_5, .grid_container .grid_6, .grid_container .grid_7, .grid_container .grid_8,
@@ -183,9 +200,14 @@ a.add_photo_button
 
 // Width that matches UCSF universal header and footer
 .wrapper {
-  // width: calc(100% - #{$container-gutter-combined} + #{$localist-grid-gutter-combined}) !important;
-  width: calc(100% - 6% + 35px) !important;
+  width: calc(100% - #{$container-gutter-combined}) !important;
+
+  @include breakpoint($bp--960-up) {
+    width: calc(100% - #{$container-gutter-combined} + #{$localist-grid-gutter-combined}) !important;
+  }
+  // width: calc(100% - 6% + 35px) !important;
 }
+
 .content-top .box_image {
   text-align: center;
 }

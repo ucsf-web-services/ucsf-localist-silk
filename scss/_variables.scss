@@ -4,6 +4,7 @@ $c-navy: #052049;
 $c-blue: #007cbe;
 $c-grey1: #f2f4f6;
 $c-grey2: #d5d9de;
+$c-gray-blue: #506380;
 // Fonts
 $main-font: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -31,11 +32,13 @@ $container-max-width-desktop: 90%;
 $container-gutter: 3%;
 $localist-grid-gutter: 15px;
 
-$container-gutter-combined: calc($container-gutter * 2);
-$localist-grid-gutter-combined: calc($localist-grid-gutter * 2);
+// Left and right values to calculate content width
+$container-gutter-combined: calc(#{$container-gutter} * 2);
+$localist-grid-gutter-combined: calc(#{$localist-grid-gutter} * 2);
 
 // Sass maps
 $btn-give: ("background":$c-blue, "font-color":$white, "font": $main-font, "icon": $icon-give);
 $ucsf-branding: ("font-color":$c-navy, "font": $main-font);
 $ucsf-branding-dark: ("background":$c-navy, "font-color":$white, "font": $main-font);
 $main-menu-mobile: ("background":$c-grey1, "font-color":$c-navy, "font": $main-font);
+$action-search: ("font-color":$c-gray-blue, "font": $main-font );
