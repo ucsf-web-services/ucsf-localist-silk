@@ -144,7 +144,7 @@ a.add_photo_button { display: none; }
 
 @media (min-width: 960px) { #top .action-menu .search_action input { padding-right: 15px; } }
 
-#top .action-menu .search_action input::after { content: ""; border-bottom: 1px solid #506380; height: 1px; }
+#top .action-menu .search_action input::after { content: ""; display: block; border-bottom: 1px solid #506380; height: 1px; }
 
 #top .action-menu .search_action button { background: none; border: 0; color: #546e7a; position: absolute; right: 0; top: auto; margin: 0; padding-right: 0; }
 
