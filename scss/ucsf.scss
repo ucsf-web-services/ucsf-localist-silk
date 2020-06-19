@@ -102,7 +102,7 @@ a.add_photo_button { display: none; }
 {padding-top: 20px; }
 
 
-.action-menu {
+#top .action-menu {
   display: grid;
   grid-template-columns: 38% 30% 32%;
   grid-template-rows: 40px 1fr;
@@ -187,6 +187,8 @@ a.add_photo_button { display: none; }
     }
   }
 }
+
+
 
 @media only screen and (max-width: 767px) and (min-width: 480px) {
   .grid_container .grid_1, .grid_container .grid_2, .grid_container .grid_3, .grid_container .grid_4,
