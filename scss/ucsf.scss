@@ -1,12 +1,11 @@
-
-// {% if site.github.repository_name %}
-// {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
-// {% endif %}
-
 @import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "variables";
 @import "ucsf-navigation";
 @import "ucsf-footer";
+
+// {% if site.github.repository_name %}
+// {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
+// {% endif %}
 
 body {
   font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
