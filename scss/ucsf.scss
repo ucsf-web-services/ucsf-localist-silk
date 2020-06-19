@@ -131,6 +131,7 @@ a.add_photo_button { display: none; }
       display: block;
       border-bottom: 1px solid map-get($action-search, "font-color");
       height: 1px;
+      margin: 1.5rem 1rem 0 0;
     }
 
     input {
@@ -220,7 +221,6 @@ a.add_photo_button { display: none; }
   @include breakpoint($bp--960-up) {
     width: calc(100% - #{$container-gutter-combined} + #{$localist-grid-gutter-combined}) !important;
   }
-  // width: calc(100% - 6% + 35px) !important;
 }
 
 .content-top .box_image {
