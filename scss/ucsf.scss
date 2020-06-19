@@ -94,10 +94,12 @@ a.add_photo_button
   margin: 30px 0 0 0;
 }
 #top .home_link {
-    font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    padding: 40px 15px 40px 40px;
+  font-family: map-get($ucsf-branding, "font");
+  color: map-get($ucsf-branding, "font-color");;
+  font-weight: 300;
+  font-size: 20px;
+  padding: $container-gutter 15px 40px 40px;
+  text-decoration: none;
 }
 #menu ul
 {
