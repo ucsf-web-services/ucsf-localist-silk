@@ -1,279 +1,152 @@
+/* breakpoints */
+.universal-header { box-sizing: border-box; display: flex; align-items: center; height: 40px; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; }
 
-{% if site.github.repository_name %}
-    {% assign base_url = '//' | append: site.github.owner_name | append: '.github.io/' | append: site.github.repository_name %}
-{% endif %}
+@media (min-width: 960px) { .universal-header { justify-content: flex-end; } }
 
-body {
-  font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
-}
-body>.grid_container {
-  margin-top: 0;
-}
-#top {
-    background: #fff;
-    border-bottom: 1px solid #e1eaf0;
-    position: relative;
-}
-#ucsf-banner-nav {
-  height: 40px;
-  overflow: visible;
-  font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
-  background: #052049;
-  width: 100%;
-  position: relative;
-  top: auto;
-}
+.universal-header * { box-sizing: border-box; }
 
-  #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
-    background: none;
-    text-indent: 0%;
-    padding-left: 0;
-  }
-  #ucsf-banner-nav .top-header-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 30px;
-    padding-right: 30px;
+.universal-header__title { display: block; text-decoration: none; color: #fff; font-size: 0.9em; margin-right: auto; }
 
-  }
-    #ucsf-banner-nav .top-header-container ul.menu {
-      padding: 0;
-      margin: 0; }
-      #ucsf-banner-nav .top-header-container ul.menu li.first {
-        display: inline-block;
-        float: left;
-        padding: 12px 0px 12px 58px;
-        background: url("{{ base_url }}/ucsf-logo-banner.png") no-repeat;
-        background-position: 0 35%;
-        background-position-x: 0;
-        background-position-y: 35%; }
-        @media (max-width: 600px) {
-          #ucsf-banner-nav .top-header-container ul.menu li.first {
-            text-indent: 100%;
-            white-space: nowrap;
-            overflow: hidden; } }
-      #ucsf-banner-nav .top-header-container ul.menu li {
-        display: inline-block;
-        float: right;
-        font-size: 14px;
-        padding: 12px 10px 12px; }
-        @media (max-width: 830px) {
-          #ucsf-banner-nav .top-header-container ul.menu li {
-            display: none; } }
-        @media (max-width: 600px) {
-          #ucsf-banner-nav .top-header-container ul.menu li {
-            display: none; } }
-        #ucsf-banner-nav .top-header-container ul.menu li a {
-          text-decoration: none;
-          color: #fff; }
-        #ucsf-banner-nav .top-header-container ul.menu li a:hover {
-          text-decoration: underline;}
+.universal-header__give { color: #fff; text-decoration: none; font-size: 0.9em; line-height: 58px; background-color: #007cbe; min-width: 152px; }
 
-/* Colors */
+.universal-header__give:hover { background-color: #0075b4; }
 
-#ucsf-banner-nav.arial {
-    font-family: arial,sans-serif;
-}
+.universal-header__give--mobile { display: flex; padding: 0 3%; }
 
-#ucsf-banner-nav.teal {
-    background: #18a3ac;
-}
+@media (min-width: 960px) { .universal-header__give--mobile { display: none; } }
 
-#ucsf-banner-nav.green {
-    background: #90bd31;
-}
+.universal-header__give--mobile .icon-give { background-image: url(https://www.ucsf.edu/themes/custom/ucsf/assets/images/card/heart-reverse.svg); background-repeat: no-repeat; background-position: right center; background-size: contain; width: 2rem; margin-left: auto; }
 
-#ucsf-banner-nav.light-blue {
-    background: #178ccb;
-}
+.universal-header__give--desktop { display: none; }
 
-#ucsf-banner-nav.orange {
-    background: #f48024;
-}
+@media (min-width: 960px) { .universal-header__give--desktop { display: flex; justify-content: center; line-height: 40px; } }
 
-#ucsf-banner-nav.grey {
-    background: #b4b9bf;
-}
+.universal-header__menu { list-style: none; display: flex; flex-direction: column; position: absolute; left: 0; top: 40px; width: 100%; height: auto; margin: 0; padding: 0; z-index: 10; max-height: 0; overflow: hidden; background-color: #f2f4f6; }
 
-#ucsf-banner-nav.purple {
-    background: #716fb2;
-}
+@media (min-width: 960px) { .universal-header__menu { display: flex; flex-direction: row; position: static; width: auto; height: 40px; max-height: 40px; background-color: transparent; margin: 0; padding: 0; box-shadow: none; transition: none; } }
 
-#ucsf-banner-nav.red {
-    background: #ec1848;
-}
+.show-nav .universal-header__menu { max-height: 400px; transition: max-height .3s ease-out; }
 
-#ucsf-banner-nav.yellow {
-    background: #ffdd00;
-}
+.universal-header__menu-link { display: block; text-decoration: none; color: #052049; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #d5d9de; padding-left: 3%; font-size: 16px; line-height: 48px; box-sizing: border-box; }
 
-#ucsf-banner-nav.white {
-    background: #ffffff;
-}
+@media (min-width: 960px) { .universal-header__menu-link { line-height: 40px; color: #fff; margin-right: 1em; border-bottom: none; padding-left: 0; font-size: 0.9em; } }
 
-#ucsf-banner-nav.yellow a,#ucsf-banner-nav.white a {
-    color: #000000;
-}
+.universal-header__menu-link:hover { text-decoration: underline; }
 
-:root #ucsf-banner-nav .top-header-container ul.menu li.first {
-    background: url("{{ base_url }}/ucsf-logo-banner.svg") no-repeat;
-    background-size: 45px 22px;
-    background-position-x: 0;
-    background-position-y: 35%;
-    background-position: 0 35%;
-}
+.universal-header__menu-toggle { display: grid; grid-template-rows: repeat(3, auto); align-content: center; align-items: start; width: 14px; background-color: transparent; outline: none; box-shadow: none; outline-style: none; border: none; cursor: pointer; box-sizing: content-box; position: relative; right: 0; top: 1px; padding-left: 1rem; padding-right: 0; height: 40px; }
 
+.universal-header__menu-toggle:focus { border: 1px dotted #fff; }
 
-:root #ucsf-banner-nav.no-logo .top-header-container ul.menu li.first {
-    background: none;
-}
+@media (min-width: 960px) { .universal-header__menu-toggle { display: none; } }
+
+.universal-header__menu-toggle .line { background-color: #fff; height: 1px; width: 14px; }
+
+.universal-header__menu-toggle .line:nth-child(1) { grid-row: 1; margin-bottom: 3px; }
+
+.universal-header__menu-toggle .line:nth-child(2) { grid-row: 2; margin-bottom: 3px; }
+
+.show-nav .universal-header__menu-toggle { display: block; }
+
+.show-nav .universal-header__menu-toggle .line { position: absolute; height: 2px; right: 0; }
+
+.show-nav .universal-header__menu-toggle .line:nth-child(1) { transform: rotate(-45deg); }
+
+.show-nav .universal-header__menu-toggle .line:nth-child(2) { display: none; }
+
+.show-nav .universal-header__menu-toggle .line:nth-child(3) { transform: rotate(45deg); }
 
 /* UCSF footer */
-.ucsf-footer {
-    background-color:#052049;
-    color: #fff;
-    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 20px;
-    float: left;
-}
+.universal-footer { color: #fff; font-size: 0.9em; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; overflow: hidden; width: 100%; margin-top: 20px; float: none; clear: both; }
 
-.ucsf-footer a {
-    color: #fff;
-    text-decoration: underline;
-}
+.universal-footer--mobile { display: block; }
 
-.ucsf-footer div {
-    margin:10px auto;
-    text-align:left;
-    padding-left: 20px;
-    left: -10px;
-    max-width: 940px;
-}
+@media (min-width: 960px) { .universal-footer--mobile { display: none; } }
 
-#ucsf-footer-mobile {
-    display: none;
-}
+.universal-footer--desktop { display: none; }
+
+@media (min-width: 960px) { .universal-footer--desktop { display: block; } }
+
+.universal-footer__content { margin: 10px 0; }
+
+.universal-footer__link { color: #fff; text-decoration: underline; }
+
+body { font-family: "Helvetica Neue", helvetica, "arial", sans-serif; margin: 0; }
+
+body > .grid_container { margin-top: 0; }
+
+#top { background: #fff; border-bottom: 1px solid #e1eaf0; position: relative; }
+
+/* Colors */
+#ucsf-banner-nav.arial { font-family: arial,sans-serif; }
+
+#ucsf-banner-nav.teal { background: #18a3ac; }
+
+#ucsf-banner-nav.green { background: #90bd31; }
+
+#ucsf-banner-nav.light-blue { background: #178ccb; }
+
+#ucsf-banner-nav.orange { background: #f48024; }
+
+#ucsf-banner-nav.grey { background: #b4b9bf; }
+
+#ucsf-banner-nav.purple { background: #716fb2; }
+
+#ucsf-banner-nav.red { background: #ec1848; }
+
+#ucsf-banner-nav.yellow { background: #ffdd00; }
+
+#ucsf-banner-nav.white { background: #ffffff; }
+
+.background--dark { background-color: #052049; }
+
+#ucsf-banner-nav.yellow a, #ucsf-banner-nav.white a { color: #000000; }
 
 /* hide localist footer */
-#lclst_footer {
-    display: none;
-}
+#lclst_footer { display: none; }
 
-/* media queries */
-@media only screen and (max-width: 767px) {
-    #ucsf-footer-mobile {
-        display: block;
-    }
+#comments { display: none; }
 
-    #ucsf-footer {
-        display: none;
-    }
-}
+div.nocontent { display: none; }
 
-#comments
-{ display: none; }
+a.add_comment_button { display: none; }
 
-div.nocontent
-{ display: none; }
-a.add_comment_button
-{ display: none; }
-a.add_review_button
-{ display: none; }
-a.add_photo_button
-{ display: none; }
-#menu {
-  float: right;
-  margin: 30px 0 0 0;
-}
-#top .home_link {
-    font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    padding: 40px 15px 40px 40px;
-}
-#menu ul
-{
-  padding: 5px;
-  float: left;
-}
-#top div a
-{
-  float: left;
-}
-#x-section-tab-buttons
-{padding-top: 20px; }
-#wrapper div.grid_4.omega.sidebar
-{padding-top: 20px; }
+a.add_review_button { display: none; }
 
+a.add_photo_button { display: none; }
 
+#menu { float: right; margin: 30px 0 0 0; }
 
-#top .search_action {
-    width: 33.33333%;
-    padding: 0 15px;
-    height: 31px;
-    float: right;
-    margin: 40px 0 0 0;
-}
-#top .search_action input {
-    background: transparent;
-    color: rgba(84,110,122,0.5);
-    font-weight: 400;
-    border: 0;
-    border-bottom: 1px solid rgba(84,110,122,0.5);
-    padding: 5px 0px;
-    margin-bottom: 0;
-    width: 85%;
-    outline: 0;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    border-radius: 0;
-}
-#top .search_action button {
-    background: none;
-    border: 0;
-    color: #546e7a;
-    position: relative;
-    right: auto;
-    top: auto;
-    margin: 0;
-}
-@media only screen and (max-width: 959px) {
-  #top .search_action {
-      display: block;
-  }
+#top .home_link { font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #052049; font-weight: 300; font-size: 20px; padding: 3% 15px 40px 40px; text-decoration: none; }
 
-  #menu {
-      float: none;
-  }
+#menu ul { padding: 5px; float: left; }
 
-  #menu .nav-button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      height: 64px;
-      padding: 50px 20px;
-  }
-}
-@media only screen and (max-width: 767px) and (min-width: 480px) {
-  .grid_container .grid_1, .grid_container .grid_2, .grid_container .grid_3, .grid_container .grid_4,
-  .grid_container .grid_5, .grid_container .grid_6, .grid_container .grid_7, .grid_container .grid_8,
-  .grid_container .grid_9, .grid_container .grid_10, .grid_container .grid_11, .grid_container .grid_12,
-  .grid_container .grid_13, .grid_container .grid_14, .grid_container .grid_15, .grid_container .grid_16 {
-      margin: 0;
-      width: 100%;
-  }
-}
-.wrapper {
-  width: 100% !important;
-}
-.content-top .box_image {
-  text-align: center;
-}
-.content-top .box_image img  {
-  max-width: 200px;
-  margin: 0 auto;
-}
+#top div a { float: left; }
+
+#x-section-tab-buttons { padding-top: 20px; }
+
+#wrapper div.grid_4.omega.sidebar { padding-top: 20px; }
+
+#top .search_action { width: 33.33333%; padding: 0 15px; height: 31px; float: right; margin: 40px 0 0 0; }
+
+#top .search_action input { background: transparent; color: rgba(84, 110, 122, 0.5); font-weight: 400; border: 0; border-bottom: 1px solid rgba(84, 110, 122, 0.5); padding: 5px 0px; margin-bottom: 0; width: 85%; outline: 0; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; border-radius: 0; }
+
+#top .search_action button { background: none; border: 0; color: #546e7a; position: relative; right: auto; top: auto; margin: 0; }
+
+@media only screen and (max-width: 959px) { #top .search_action { display: block; }
+  #menu { float: none; }
+  #menu .nav-button { position: absolute; top: 0; right: 0; display: block; height: 64px; padding: 50px 20px; } }
+
+@media only screen and (max-width: 767px) and (min-width: 480px) { .grid_container .grid_1, .grid_container .grid_2, .grid_container .grid_3, .grid_container .grid_4, .grid_container .grid_5, .grid_container .grid_6, .grid_container .grid_7, .grid_container .grid_8, .grid_container .grid_9, .grid_container .grid_10, .grid_container .grid_11, .grid_container .grid_12, .grid_container .grid_13, .grid_container .grid_14, .grid_container .grid_15, .grid_container .grid_16 { margin: 0; width: 100%; } }
+
+.wrapper { width: 100% !important; }
+
+.content-top .box_image { text-align: center; }
+
+.content-top .box_image img { max-width: 200px; margin: 0 auto; }
+
+/* Utility classes */
+.u-visually-hidden { position: absolute !important; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; height: 1px; width: 1px; word-wrap: normal; }
+
+.l-container { padding: 0 3%; }
+
+/*# sourceMappingURL=ucsf.css.map */

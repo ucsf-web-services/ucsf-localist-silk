@@ -5,6 +5,16 @@
 
 ## Local installation for development
 
+1. Install node packages
+    ```bash
+    npm ci
+    ```
+2. Watch scss files and compile to css.
+    ```bash
+    npm start
+    ```
+
+### Optional Jekyll Development
 1. Install [Jekyll](http://jekyllrb.com/).
 2. From within your local repository root, run Jekyll.
 

@@ -1,0 +1,37 @@
+// Colors
+$white: #fff;
+$c-navy: #052049;
+$c-blue: #007cbe;
+$c-grey1: #f2f4f6;
+$c-grey2: #d5d9de;
+// Fonts
+$main-font: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$default--font-size: 16px;
+$font-size-small: .9em;
+$default--line-height: 1.4;
+
+
+/* breakpoints */
+$width--medium  : 769px;
+$width--960  	: 960px;
+
+$bp--medium-up  : $width--medium;
+$bp--960-up  	: $width--960;
+
+// z-index
+$z-highest: 10;
+
+// Icon urls, must be absolute for localist to use
+$icon-give: url(https://www.ucsf.edu/themes/custom/ucsf/assets/images/card/heart-reverse.svg);
+
+// container and gutters
+$container-max-width: 94%;
+$container-max-width-desktop: 90%;
+$container-gutter: 3%;
+
+// Sass maps
+$btn-give: ("background":$c-blue, "font-color":$white, "font": $main-font, "icon": $icon-give);
+$ucsf-branding: ("font-color":$c-navy, "font": $main-font);
+$ucsf-branding-dark: ("background":$c-navy, "font-color":$white, "font": $main-font);
+$main-menu-mobile: ("background":$c-grey1, "font-color":$c-navy, "font": $main-font);
