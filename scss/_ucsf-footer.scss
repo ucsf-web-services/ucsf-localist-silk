@@ -1,0 +1,36 @@
+/* UCSF footer */
+.universal-footer {
+  color: map-get($ucsf-branding-dark, "font-color");
+  font-size: $font-size-small;
+  font-family: map-get($ucsf-branding-dark, "font");
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+  float: none;
+  clear: both;
+
+  &--mobile {
+    display: block;
+
+    @include breakpoint($bp--960-up) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include breakpoint($bp--960-up) {
+      display: block;
+    }
+  }
+
+  &__content {
+    margin: 10px 0;
+  }
+
+  &__link {
+    color: map-get($ucsf-branding-dark, "font-color");
+    text-decoration: underline;
+  }
+}

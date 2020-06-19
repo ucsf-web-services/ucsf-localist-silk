@@ -14,7 +14,6 @@ $btn-give-height-mobile: 58px;
   height: $universal-nav-height;
   font-family: map-get($ucsf-branding-dark, "font");
   position: relative;
-  padding: 0 $container-gutter;
 
   @include breakpoint($bp--960-up) {
     justify-content: flex-end;

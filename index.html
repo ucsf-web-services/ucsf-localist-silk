@@ -2,26 +2,27 @@
 <html lang="en">
 
 <head>
-<!-- {% include base_url_assignment.html %} -->
-<!-- LOCALIST COMMENT - START head_tags -->
+  <!-- {% include base_url_assignment.html %} -->
+  <!-- LOCALIST COMMENT - START head_tags -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- LOCALIST COMMENT - PLACEHOLDER localist_styles -->
   <link rel="stylesheet" media="all" href="/css/ucsf.css">
   <link rel="stylesheet" media="print" href="/css/ucsf-print.css">
   <link rel="shortcut icon" href="{{ base_url }}/favicon.ico" />
   <!-- LOCALIST COMMENT - PLACEHOLDER localist_js -->
-<!-- LOCALIST COMMENT - END head_tags -->
+  <!-- LOCALIST COMMENT - END head_tags -->
 </head>
 
 <body>
-<!-- LOCALIST COMMENT - START body -->
+  <!-- LOCALIST COMMENT - START body -->
   <div id="wrapper">
     <header>
       <section class="background--dark">
-        <div id="ucsf-header-nav" class="universal-header">
-          <a id='site-name' class="first universal-header__title" href="https://www.ucsf.edu">University of California San Francisco</a>
-           <!-- Mobile nav toggle -->
-           <button data-js="nav-toggle" class="universal-header__menu-toggle">
+        <div id="ucsf-header-nav" class="universal-header l-container">
+          <a id='site-name' class="first universal-header__title"
+            href="https://www.ucsf.edu">University of California San Francisco</a>
+          <!-- Mobile nav toggle -->
+          <button data-js="nav-toggle" class="universal-header__menu-toggle">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -31,20 +32,26 @@
             <h2 class="u-visually-hidden" id="universal-header-main-menu">Main Menu</h2>
             <ul id="collapsible-menu" class="menu universal-header__menu">
               <li>
-                <a href="https://www.ucsfhealth.org/" class="universal-header__menu-link">UCSF Medical Center</a>
+                <a href="https://www.ucsfhealth.org/" class="universal-header__menu-link">UCSF
+                  Medical Center</a>
               </li>
               <li>
-                <a href="https://www.ucsf.edu/search" class="universal-header__menu-link">Search UCSF</a>
+                <a href="https://www.ucsf.edu/search" class="universal-header__menu-link">Search
+                  UCSF</a>
               </li>
               <li>
-                <a href="https://www.ucsf.edu/about" class="universal-header__menu-link">About UCSF</a>
+                <a href="https://www.ucsf.edu/about" class="universal-header__menu-link">About
+                  UCSF</a>
               </li>
               <!-- Give btn - mobile -->
-              <a href="https://giving.ucsf.edu" class="universal-header__give universal-header__give--mobile">Give to UCSF<span class="icon-give"></span></a>
+              <a href="https://giving.ucsf.edu"
+                class="universal-header__give universal-header__give--mobile">Give to UCSF<span
+                  class="icon-give"></span></a>
             </ul>
           </nav>
           <!-- Give btn - desktop -->
-          <a href="https://giving.ucsf.edu" class="universal-header__give universal-header__give--desktop">Give to UCSF</a>
+          <a href="https://giving.ucsf.edu"
+            class="universal-header__give universal-header__give--desktop">Give to UCSF</a>
         </div>
       </section>
 
@@ -61,21 +68,41 @@
       <div class="wrapper">
         <!-- LOCALIST COMMENT - PLACEHOLDER top_bar -->
         <!-- LOCALIST COMMENT - PLACEHOLDER content -->
-        <div id="ucsf-footer" class="ucsf-footer">
-          <div>Questions about the Events Calendar? Check out our <a
-              href="https://www.ucsf.edu/content/ucsf-events-calendar-frequently-asked-questions">FAQ</a>
-            or contact us at <a href="mailto:calendar@ucsf.edu">calendar@ucsf.edu</a>.</div>
-          <div>
-            <!-- LOCALIST COMMENT - PLACEHOLDER search_bar -->
+        <footer class="background--dark universal-footer">
+          <!-- Mobile Footer Start -->
+          <div id="ucsf-footer-mobile" class="universal-footer--mobile l-container">
+            <div class="universal-footer__content">&copy; {{ site.time | date: "%Y" }} The UC
+              Regents |
+              <a class="universal-footer__link"
+                href="https://www.ucsf.edu/content/ucsf-events-calendar-frequently-asked-questions">FAQ</a>
+              | <a href="mailto:calendar@ucsf.edu" class="universal-footer__link">Contact Us</a>
+            </div>
           </div>
-          <div>&copy; {{ site.time | date: "%Y" }} The Regents of the University of California. All
-            rights reserved.</div>
-        </div>
-        <div id="ucsf-footer-mobile" class="ucsf-footer">
-          <div>&copy; {{ site.time | date: "%Y" }} The UC Regents | <a
-              href="https://www.ucsf.edu/content/ucsf-events-calendar-frequently-asked-questions">FAQ</a>
-            | <a href="mailto:calendar@ucsf.edu">Contact Us</a></div>
-        </div>
+          <!-- Mobile Footer End-->
+
+          <!-- Desktop Footer Start -->
+          <div id="ucsf-footer" class="universal-footer--desktop l-container">
+            <div class="universal-footer__content">
+              <span>Questions about the Events Calendar? Check out our </span>
+              <a href="https://www.ucsf.edu/content/ucsf-events-calendar-frequently-asked-questions"
+                class="universal-footer__link">FAQ</a>
+              <span> or contact us at </span>
+              <a href="mailto:calendar@ucsf.edu"
+                class="universal-footer__link">calendar@ucsf.edu</a>.
+            </div>
+
+            <div>
+              <!-- LOCALIST COMMENT - PLACEHOLDER search_bar -->
+            </div>
+
+            <div class="universal-footer__content">&copy; {{ site.time | date: "%Y" }} The Regents
+              of the University of California.
+              All
+              rights reserved.</div>
+          </div>
+          <!-- Desktop Footer End -->
+        </footer>
+
       </div>
     </div>
   </div>
@@ -97,7 +124,7 @@
     };
 
     // Only execute navigation extend / collapse code in mobile
-    var mobileDetect = function(event) {
+    var mobileDetect = function (event) {
       // Mobile
       if (event.matches) {
         // set area controls
@@ -107,7 +134,7 @@
         // toggle mobile menu open and closed
         $menuToggle.addEventListener('click', toggleMenu);
 
-      // Desktop
+        // Desktop
       } else {
         body.classList.remove('show-nav');
         $menuToggle.removeEventListener('click', toggleMenu);

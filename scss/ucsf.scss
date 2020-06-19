@@ -6,6 +6,7 @@
 @import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "variables";
 @import "ucsf-navigation";
+@import "ucsf-footer";
 
 body {
   font-family: "Helvetica Neue", helvetica, "arial", sans-serif;
@@ -70,48 +71,11 @@ body>.grid_container {
     color: #000000;
 }
 
-/* UCSF footer */
-.ucsf-footer {
-    background-color:#052049;
-    color: #fff;
-    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 20px;
-    float: left;
-}
 
-.ucsf-footer a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.ucsf-footer div {
-    margin:10px auto;
-    text-align:left;
-    padding-left: 20px;
-    left: -10px;
-    max-width: 940px;
-}
-
-#ucsf-footer-mobile {
-    display: none;
-}
 
 /* hide localist footer */
 #lclst_footer {
     display: none;
-}
-
-/* media queries */
-@media only screen and (max-width: 767px) {
-    #ucsf-footer-mobile {
-        display: block;
-    }
-
-    #ucsf-footer {
-        display: none;
-    }
 }
 
 #comments
@@ -229,4 +193,8 @@ a.add_photo_button
   height: 1px;
   width: 1px;
   word-wrap: normal;
+}
+
+.l-container {
+  padding: 0 $container-gutter;
 }

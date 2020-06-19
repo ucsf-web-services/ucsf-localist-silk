@@ -1,5 +1,5 @@
 /* breakpoints */
-.universal-header { box-sizing: border-box; display: flex; align-items: center; height: 40px; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; padding: 0 3%; }
+.universal-header { box-sizing: border-box; display: flex; align-items: center; height: 40px; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; position: relative; }
 
 @media (min-width: 960px) { .universal-header { justify-content: flex-end; } }
 
@@ -55,6 +55,21 @@
 
 .show-nav .universal-header__menu-toggle .line:nth-child(3) { transform: rotate(45deg); }
 
+/* UCSF footer */
+.universal-footer { color: #fff; font-size: 0.9em; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; overflow: hidden; width: 100%; margin-top: 20px; float: none; clear: both; }
+
+.universal-footer--mobile { display: block; }
+
+@media (min-width: 960px) { .universal-footer--mobile { display: none; } }
+
+.universal-footer--desktop { display: none; }
+
+@media (min-width: 960px) { .universal-footer--desktop { display: block; } }
+
+.universal-footer__content { margin: 10px 0; }
+
+.universal-footer__link { color: #fff; text-decoration: underline; }
+
 body { font-family: "Helvetica Neue", helvetica, "arial", sans-serif; margin: 0; }
 
 body > .grid_container { margin-top: 0; }
@@ -86,21 +101,8 @@ body > .grid_container { margin-top: 0; }
 
 #ucsf-banner-nav.yellow a, #ucsf-banner-nav.white a { color: #000000; }
 
-/* UCSF footer */
-.ucsf-footer { background-color: #052049; color: #fff; font-family: "Helvetica Neue", helvetica, arial, sans-serif; overflow: hidden; width: 100%; margin-top: 20px; float: left; }
-
-.ucsf-footer a { color: #fff; text-decoration: underline; }
-
-.ucsf-footer div { margin: 10px auto; text-align: left; padding-left: 20px; left: -10px; max-width: 940px; }
-
-#ucsf-footer-mobile { display: none; }
-
 /* hide localist footer */
 #lclst_footer { display: none; }
-
-/* media queries */
-@media only screen and (max-width: 767px) { #ucsf-footer-mobile { display: block; }
-  #ucsf-footer { display: none; } }
 
 #comments { display: none; }
 
@@ -144,5 +146,7 @@ a.add_photo_button { display: none; }
 
 /* Utility classes */
 .u-visually-hidden { position: absolute !important; clip: rect(1px, 1px, 1px, 1px); overflow: hidden; height: 1px; width: 1px; word-wrap: normal; }
+
+.l-container { padding: 0 3%; }
 
 /*# sourceMappingURL=ucsf.css.map */
