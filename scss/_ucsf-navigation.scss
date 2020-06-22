@@ -131,7 +131,7 @@ $btn-give-height-mobile: 58px;
     @include breakpoint($bp--960-up) {
       line-height: $universal-nav-height;
       color: map-get($ucsf-branding-dark, "font-color");
-      margin-right: 1em;
+      margin-right: 2em;
       border-bottom: none;
       padding-left: 0;
       font-size: $default--font-size;
@@ -204,8 +204,6 @@ $btn-give-height-mobile: 58px;
     .line {
       position: absolute;
       height: 2px;
-      align-items: center;
-      justify-content: center;
 
       &:nth-child(1) {
         transform: rotate(-45deg);
