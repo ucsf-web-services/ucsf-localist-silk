@@ -53,7 +53,7 @@
 
 .show-nav .universal-header__menu-toggle { display: grid; align-items: center; justify-content: center; }
 
-.show-nav .universal-header__menu-toggle .line { position: absolute; height: 2px; align-items: center; justify-content: center; }
+.show-nav .universal-header__menu-toggle .line { position: absolute; height: 2px; }
 
 .show-nav .universal-header__menu-toggle .line:nth-child(1) { transform: rotate(-45deg); margin-bottom: 1px; }
 
