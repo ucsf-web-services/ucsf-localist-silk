@@ -165,10 +165,10 @@ $btn-give-height-mobile: 58px;
   box-sizing: content-box;
   // Positioning within the header
   position: relative;
-  right: 0;
+  right: -#{$container-gutter};
   top: 1px;
   padding-left: 1rem;
-  padding-right: 0;
+  padding-right: $container-gutter;
   height: $universal-nav-height;
 
   &:hover {
