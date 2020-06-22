@@ -7,6 +7,8 @@
 
 .universal-header__title { display: block; text-decoration: none; color: #fff; font-size: 16px; margin-right: auto; }
 
+@media (min-width: 960px) { .universal-header__title { font-size: 0.9em; } }
+
 .universal-header__title:hover { color: #fff; }
 
 .universal-header__give { color: #fff; text-decoration: none; font-size: 16px; line-height: 58px; background-color: #007cbe; min-width: 152px; }
