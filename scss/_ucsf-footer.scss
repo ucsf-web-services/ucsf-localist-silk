@@ -1,7 +1,7 @@
 /* UCSF footer */
 .universal-footer {
   color: map-get($ucsf-branding-dark, "font-color");
-  font-size: $font-size-small;
+  font-size: $default--font-size;
   font-family: map-get($ucsf-branding-dark, "font");
   overflow: hidden;
   width: 100%;

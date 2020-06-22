@@ -27,7 +27,7 @@ $btn-give-height-mobile: 58px;
     display: block;
     text-decoration: none;
     color: map-get($ucsf-branding-dark, "font-color");
-    font-size: $font-size-small;
+    font-size: $default--font-size;
     margin-right: auto;
 
     &:hover {
@@ -39,7 +39,7 @@ $btn-give-height-mobile: 58px;
   &__give {
     color: map-get($btn-give, "font-color");
     text-decoration: none;
-    font-size: $font-size-small;
+    font-size: $default--font-size;
     line-height: $btn-give-height-mobile;
     background-color: map-get($btn-give, "background");
     min-width: 152px;
@@ -134,7 +134,7 @@ $btn-give-height-mobile: 58px;
       margin-right: 1em;
       border-bottom: none;
       padding-left: 0;
-      font-size: $font-size-small;
+      font-size: $default--font-size;
     }
 
     &:hover {
