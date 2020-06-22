@@ -165,9 +165,9 @@ $btn-give-height-mobile: 58px;
   box-sizing: content-box;
   // Positioning within the header
   position: relative;
-  right: -#{$container-gutter};
   top: 1px;
   padding-left: 1rem;
+  right: -#{$container-gutter};
   padding-right: $container-gutter;
   height: $universal-nav-height;
 
@@ -197,7 +197,9 @@ $btn-give-height-mobile: 58px;
   }
 
   .show-nav & {
-    display: block;
+    display: grid;
+    align-content: center;
+    justify-content: center;
 
     .line {
       position: absolute;
