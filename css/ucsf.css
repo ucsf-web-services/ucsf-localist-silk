@@ -53,13 +53,13 @@
 
 .show-nav .universal-header__menu-toggle { display: grid; align-content: center; justify-content: center; }
 
-.show-nav .universal-header__menu-toggle .line { position: absolute; height: 2px; align-content: center; justify-content: center; }
+.show-nav .universal-header__menu-toggle .line { position: absolute; height: 2px; align-items: center; justify-content: center; }
 
-.show-nav .universal-header__menu-toggle .line:nth-child(1) { transform: rotate(-45deg); }
+.show-nav .universal-header__menu-toggle .line:nth-child(1) { transform: rotate(-45deg); margin-bottom: 1px; }
 
 .show-nav .universal-header__menu-toggle .line:nth-child(2) { display: none; }
 
-.show-nav .universal-header__menu-toggle .line:nth-child(3) { transform: rotate(45deg); }
+.show-nav .universal-header__menu-toggle .line:nth-child(3) { transform: rotate(45deg); margin-bottom: 0; }
 
 /* UCSF footer */
 .universal-footer { color: #fff; font-size: 16px; font-family: "HelveticaNeueLTW04-55Roman", "Helvetica Neue", Helvetica, Arial, sans-serif; overflow: hidden; width: 100%; margin-top: 20px; float: none; clear: both; }
