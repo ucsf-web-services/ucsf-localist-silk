@@ -204,7 +204,8 @@ $btn-give-height-mobile: 58px;
     .line {
       position: absolute;
       height: 2px;
-      right: 0;
+      align-content: center;
+      justify-content: center;
 
       &:nth-child(1) {
         transform: rotate(-45deg);
