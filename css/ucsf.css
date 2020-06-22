@@ -51,7 +51,7 @@
 
 .universal-header__menu-toggle .line:nth-child(2) { grid-row: 2; margin-bottom: 3px; }
 
-.show-nav .universal-header__menu-toggle { display: grid; align-content: center; justify-content: center; }
+.show-nav .universal-header__menu-toggle { display: grid; align-items: center; justify-content: center; }
 
 .show-nav .universal-header__menu-toggle .line { position: absolute; height: 2px; align-items: center; justify-content: center; }
 
