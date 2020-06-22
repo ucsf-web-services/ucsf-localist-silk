@@ -21,7 +21,7 @@
 
 .universal-header__give--desktop { display: none; }
 
-@media (min-width: 960px) { .universal-header__give--desktop { display: flex; justify-content: center; line-height: 40px; } }
+@media (min-width: 960px) { .universal-header__give--desktop { display: flex; justify-content: center; line-height: 40px; font-size: 0.9em; } }
 
 .universal-header__menu { list-style: none; display: flex; flex-direction: column; position: absolute; left: 0; top: 40px; width: 100%; height: auto; margin: 0; padding: 0; z-index: 10; max-height: 0; overflow: hidden; background-color: #f2f4f6; }
 
@@ -31,7 +31,7 @@
 
 .universal-header__menu-link { display: block; text-decoration: none; color: #052049; overflow: hidden; white-space: nowrap; border-bottom: 1px solid #d5d9de; padding-left: 3%; font-size: 16px; line-height: 48px; box-sizing: border-box; }
 
-@media (min-width: 960px) { .universal-header__menu-link { line-height: 40px; color: #fff; margin-right: 2em; border-bottom: none; padding-left: 0; font-size: 16px; } }
+@media (min-width: 960px) { .universal-header__menu-link { line-height: 40px; color: #fff; margin-right: 2em; border-bottom: none; padding-left: 0; font-size: 0.9em; } }
 
 .universal-header__menu-link:hover { color: #052049; text-decoration: underline; }
 
@@ -70,7 +70,7 @@
 
 .universal-footer--desktop { display: none; }
 
-@media (min-width: 960px) { .universal-footer--desktop { display: block; } }
+@media (min-width: 960px) { .universal-footer--desktop { display: block; font-size: 0.9em; } }
 
 .universal-footer__content { margin: 10px 0; }
 

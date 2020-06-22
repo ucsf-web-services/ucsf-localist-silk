@@ -74,6 +74,7 @@ $btn-give-height-mobile: 58px;
         display: flex;
         justify-content: center;
         line-height: $universal-nav-height;
+        font-size: $font-size-small;
       }
     }
   }
@@ -134,7 +135,7 @@ $btn-give-height-mobile: 58px;
       margin-right: 2em;
       border-bottom: none;
       padding-left: 0;
-      font-size: $default--font-size;
+      font-size: $font-size-small;
     }
 
     &:hover {
