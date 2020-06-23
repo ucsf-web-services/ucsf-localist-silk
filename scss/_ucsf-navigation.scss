@@ -30,6 +30,10 @@ $btn-give-height-mobile: 58px;
     font-size: $default--font-size;
     margin-right: auto;
 
+    @include breakpoint($bp--960-up) {
+      font-size: $font-size-small;
+    }
+
     &:hover {
       color: map-get($ucsf-branding-dark, "font-color");
     }
